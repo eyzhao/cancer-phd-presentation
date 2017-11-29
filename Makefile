@@ -1,4 +1,6 @@
-
+all: \
+	git/revealjs \
+	git/headjs
 
 ######################
 ### Load Reveal.js ###

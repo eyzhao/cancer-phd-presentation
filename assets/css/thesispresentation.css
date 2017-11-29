@@ -2,3 +2,48 @@
     background: none;
     border: none;
 }
+
+.reveal .slides section .fragment.push {
+	display: none;
+}
+
+.reveal .slides section .fragment.push.current-fragment {
+	display: inline;
+}
+
+.reveal .slides section .fragment.push-out {
+	display: inline;
+	opacity: 1;
+}
+
+.reveal .slides section .fragment.push-out.visible {
+	display: none;
+}
+
+.reveal .slides section .fragment.push-in {
+	display: none;
+}
+
+.reveal .slides section .fragment.push-in.visible {
+	display: inline;
+}
+
+.reveal .slides section .fragment.switch {
+	opacity: 1;
+	display: inline;
+}
+
+.reveal .slides section .fragment.switch + * {
+	opacity: 0;
+	display: none;
+}
+
+.reveal .slides section .fragment.switch.visible {
+	opacity: 0;
+	display: none;
+}
+
+.reveal .slides section .fragment.switch.visible + * {
+	opacity: 1;
+	display: inline;
+}
