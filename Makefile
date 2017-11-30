@@ -3,7 +3,8 @@ all: \
 	git/headjs \
 	publications/brca-signatures-paper \
 	publications/pog-pancreatic-paper \
-	publications/pog-sarcoma-paper
+	publications/pog-sarcoma-paper \
+	publications/mutation-signature-tools
 
 ######################
 ### Load Reveal.js ###
