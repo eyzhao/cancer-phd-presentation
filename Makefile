@@ -1,7 +1,10 @@
 all: \
 	git/revealjs \
 	git/headjs \
-	meta/reference_snv_signatures.txt
+	meta/reference_snv_signatures.txt \
+	publications/brca-signatures-paper \ 
+	publications/pog-pancreatic-paper \
+	publications/pog-sarcoma-paper
 
 ######################
 ### Load Reveal.js ###
