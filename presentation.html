@@ -12,7 +12,7 @@
                 <section>
 
                     <!-- Title slide -->
-                    <section data-markdown>
+                    <section data-markdown data-background-image='images/wtsi_signatures.png' data-state='dimbg'>
                         ## How POG Advances Genomic Instability Research
                         #### Eric Zhao
 
@@ -25,15 +25,17 @@
                         ![Cancer evolution schematic](images/ding_2012_nature_fig2a_cancer-evolution-explanation.png)
                         <small> Ding et al, 2012, Nature </small>
 
-                        *most neoplasms arise from a single cell of origin, and
-                        **tumor progression** results from **acquired genetic variability**
-                        ... allowing **sequential selection** of more aggressive sublines.*
-                        
-                        &mdash; Peter Carey Nowell (1976, Science)
+                        <p style='font-size: 30'>
+                            *most neoplasms arise from a single cell of origin, and
+                            **tumor progression** results from **acquired genetic variability**
+                            ... allowing **sequential selection** of more aggressive sublines.*
+                            
+                            &mdash; Peter Carey Nowell (1976, Science)
+                        </p>
                     </script> </section>
 
                     <!-- Causes of mutation -->
-                    <section>
+                    <section data-background-image='http://otherways.be/wp-content/uploads/2015/04/Screen-Shot-2015-04-03-at-10.47.12.png' data-state='dimbg'>
                         <h3>Causes of Mutation</h3>
 
                         <div>
@@ -83,8 +85,31 @@
                     </script> </section>
 
                     <!-- Introduction to mutation signatures -->
-                    <section>
+                    <section id='signatures'>
                         <h3>Mutation Signatures</h3>
+
+                        Mutation signatures are associated with etiologies like
+                        <strong>age</strong>,
+                        <strong>mutagens</strong>, or
+                        <strong>DNA repair deficiency</strong>.
+
+                        <div style='display: grid; grid-template-columns: 4fr 1fr'>
+                            <div>
+                                <p>
+                                    <span style='vertical-align: middle; font-size: 80' class='stretch'>
+                                        <a href='#nowhere' onClick='switch_previous()'> &lt; </a>
+                                    </span>
+                                    <img id='signature_figures' src='publications/mutation-signature-tools/example-files/individual_signatures/Signature_1.svg' style='vertical-align: middle;' width='600px'/>
+                                    <span style='vertical-align: middle; font-size: 80' class='stretch'>
+                                        <a href='#nowhere' onClick='switch_next()'> &gt; </a>
+                                    </span>
+                                </p>
+                            </div>
+                            <div>
+                                <img src='images/signature-legend.png'/>
+                            </div>
+                        </div>
+
                     </section>
 
                     <!-- Outline of my research -->
@@ -245,7 +270,7 @@
                         </tr></table>
                     </section>
 
-                    <section data-markdown> <script type="text/template">
+                    <section data-markdown data-background-image='images/train.jpg' data-state='dimbg'> <script type="text/template">
                         ### Rationale for Therapy
                         
                         - ***BRCA1/2*** <sup>-/-</sup> &rarr; HRD signature
@@ -312,9 +337,6 @@
                         ### HRD Associated Genes
                         ![HRD-associated genes](publications/brca-signatures-paper/paper/figures/gene_heatmap_anonymous-1.png)
 
-                        **HRDetect associated with**
-                        - *TP53*, *BRCA1*, *BRCA2*
-                        - Potential Associations: *PTEN*, *RAD50/51*
                     </script> </section>
 
                     <section data-markdown> <script type="text/template">
@@ -326,7 +348,7 @@
                             <td> Stable Disease </td>
                         </tr></table>
 
-                        ![HRDetect ROC](images/hrdetect_roc_curves.png)
+                        <img src='images/hrdetect_roc_curves.png' width='80%' />
 
                         ![HRDetect ROC](images/hrdetect_prediction_metrics.png)
                     </script> </section>
@@ -396,7 +418,7 @@
                     </script></section>
 
                     <section data-markdown><script type = 'text/template'>
-                        <img src='./images/pancreatic-case/mutation-timing.png' width = '70%'/>
+                        <img src='./images/pancreatic-case/mutation-timing.png' width = '60%'/>
 
                         <img src='./images/pancreatic-case/mutation-timing-data.png' width = '70%' />
  
@@ -429,7 +451,7 @@
                     <section data-markdown><script type = 'text/template'>
                         ### POG Pancreatic Cancer Analysis
 
-                        ![](./images/pancreatic-case/pancreatic-folfirinox-outcomes.png)
+                        <img src='./images/pancreatic-case/pancreatic-folfirinox-outcomes.png' width='80%' />
                         <p class='figcaption'>Laura Williamson, Hui-li Wong</p>
 
                         High HRDetect is associated with HRD pathway variants and response to FOLFIRINOX.
@@ -443,14 +465,14 @@
                         <h3>Future Directions: Signatures in POG Sarcomas</h3>
 
                         <table><tr>
-                            <col style='width: 75%' />
-                            <col style='width: 25%' />
+                            <col style='width: 65%' />
+                            <col style='width: 35%' />
                             <td>
                                 <img src='publications/pog-sarcoma-paper/analysis/figures/signature-clustering-3.png' />
                             </td>
                             <td>
                                 <span style='font-size:16'>
-                                    Collaborators: 
+                                    <p style='font-weight: bold'>Collaborators:</p>
                                     <ul>
                                         <li>Erin Pleasance</li>
                                         <li>Jasleen Grewal</li>
@@ -474,13 +496,15 @@
                     <section>
                         <h3>Future Directions: Using Mutation Signatures to Inform Diagnosis</h3>
 
-                        <img src='./images/signatures-for-diagnosis.png' />
-                        <p class='figcaption'>Jasleen Grewal</p>
+                        <p style='font-size: 35px'>
+                            Mutation signatures can aid diagnosis, especially in commonly hypermutated tumour types.
+                        </p>
 
-                        Mutation signatures can aid diagnosis, especially in commonly hypermutated tumour types.
+                        <img src='./images/signatures-for-diagnosis.png' width='80%' />
+                        <p class='figcaption'>Jasleen Grewal</p>
                     </section>
 
-                    <section data-markdown>
+                    <section data-markdown data-background-image='images/wtsi_signatures.png' data-state='dimbg'>
                         ### Summary
 
                         - WGS reveals mutation signatures
@@ -488,8 +512,173 @@
                         - Genomic instability has implications for therapy
                     </section>
 
-                    <section data-markdown>
+                    <section>
                         Acknowledgements
+
+                        <div style='
+                            display: grid; 
+                            grid-template-columns: 1fr 1fr 1fr 1fr 1.5fr;
+                            grid-gap: 10px;
+                        '>
+
+                            <div style='grid-column: 1;' class='acknowledgements' />
+                                <p>
+                                    <strong>Jones Lab</strong> <br/>
+                                    Steve Jones <br/>
+                                    Erin Pleasance <br/>
+                                    Yaoqing Shen <br/>
+                                    Jake Lever <br/>
+                                    Jasleen Grewal <br/>
+                                    Pinaki Bose  <br/>
+                                    Daryanaz Dargahi <br/>
+                                    Katayoon Kasaian  <br/>
+                                    My Linh Thibodeau  <br/>
+                                    Celia Siu <br/>
+                                    Santina Lin  <br/>
+                                    Luka Culibrk <br/>
+                                    Jenny Yang <br/>
+                                    Tariq Vira <br/>
+                                    Jahanshah Ashkani <br/>
+                                    Neelam Memon  <br/>
+                                    Cameron Grisdale <br/>
+                                    Andrew Ponomarev <br/>
+                                    Zoltan Bozoky <br/>
+                                    Brad Davis <br/>
+                                    Sreeja Leelakumari  <br/>
+                                    Mhairi Sigrist  <br/>
+                                    Brenda Koster <br/>
+                                </p>
+
+                                <p>
+                                    <strong>Committee</strong> <br/>
+                                    Marco Marra  <br/>
+                                    Inanc Birol  <br/>
+                                    Stephen Yip  <br/>
+                                    Christian Steidl <br/>
+                                </p>
+                            </div>
+
+                            <div style='grid-column: 2;' class='acknowledgements'/>
+                                <p>
+                                    <strong>POG Clinical/Pathology</strong><br />
+                                    Hui-li Wong <br />
+                                    Daniel Renouf <br />
+                                    Brandon Sheffield <br />
+                                    David Shaeffer <br />
+                                    Joanna Karasinka <br />
+                                    Sophie Sun<br />
+                                    Tamara Shenkier<br />
+                                    Diego Villa<br />
+                                    Caroline Lohrisch<br />
+                                    Stephen Chia<br />
+                                    Wendie Den Brok <br />
+                                    Sheridan Wilson <br />
+                                    Solomon Bandt <br />
+                                    Tony Ng <br />
+                                    Xiaolan Feng <br />
+                                    Rod Rassekh <br />
+                                    Rebecca Deyell <br />
+                                    Howard Lim <br />
+                                    Karen Gelmon <br />
+                                    Janessa Laskin<br />
+                                </p>
+
+                                <p>
+                                    <strong>POG Analysts</strong><br />
+                                    Martin Jones<br />
+                                    Laura Williamson<br />
+                                    Elisa Majounie<br />
+                                    Caralyn Reisle<br />
+                                    Melika Bonakdar<br />
+                                    Simon Chan<br />
+                                    Greg Taylor<br />
+                                </p>
+                            </div>
+
+                            <div style='grid-column: 3;' class='acknowledgements' />
+                                <p>
+                                    <strong>Sequencing & Bioinformatics</strong><br />
+                                    Carolyn Ch’ng <br />
+                                    Caralyn Reisle <br />
+                                    Yussanne Ma <br />
+                                    Hillary Pearson<br />
+                                    Dustin Bleile <br />
+                                    Karen Mungall<br />
+                                    Richard Corbett <br />
+                                    Martin Krzywinski<br />
+                                    Nina Thiessen<br />
+                                    Andy Mungall<br />
+                                    Yongjun Zhao<br />
+                                    Richard Moore<br />
+                                    Jacqueline Shein<br />
+                                </p>
+
+                                <p>
+                                    <strong>Ethics/Germline</strong><br />
+                                    Kasmintan Schrader <br />
+                                    Aly Karsan <br />
+                                    Sean Young<br />
+                                    Ian Bosdet<br />
+                                </p>
+
+                                <p>
+                                    <strong>Projects Team</strong><br />
+                                    Jessica Nelson<br />
+                                    Katherine Mui<br />
+                                    Payal Simpahimalani<br />
+                                    Alexandra Fok<br />
+                                    Robyn Roscoe<br />
+                                </p>
+                            </div>
+
+                            <div style='grid-column: 4;' class='acknowledgements' />
+                                <p>
+                                    <strong>Analysis Help</strong><br />
+                                    Bruno Grande<br />
+                                    Peter Eirew<br />
+                                </p>
+
+                                <p>
+                                    <strong>MD/PhD Program & BTP</strong><br />
+                                    Sharon Ruschkowski<br/>
+                                    Lynn Raymond<br />
+                                    Torsten Neilsen<br />
+                                    Jane Lee<br />
+                                </p>
+
+                                <p>
+                                    <strong>Helpful Discussion</strong><br />
+                                    Emilia Lim <br/>
+                                    Allen Zhang <br/>
+                                    Elizabeth Chun <br/>
+                                </p>
+                                <p>
+                                    All analysts, investigators, clinicians, patients, and support staff of the
+                                    <strong>personalized oncogenomics project</strong>.
+                                </p>
+
+                                <p>
+                                    All production leaders and staff at the <strong>BC Genome Sciences Centre</strong>.
+                                </p>
+                            </div>
+
+                            <div style='grid-column: 5;' class='acknowledgements' />
+                                <p>
+                                    <img src='images/logos/gsclogo-white-blue-01.png' />
+                                    <img src='images/logos/bcf-logo.jpg' />
+                                    <img src='images/logos/ubc-mdphd-logo.gif' />
+                                    <div style='display: grid; grid-template-columns: 2fr 1fr'>
+                                        <div style='grid-column: 1;' />
+                                            <p><img src='images/logos/vanier_logo.jpg' /></p>
+                                        </div>
+                                        <div style='grid-column: 2;'>
+                                            <p><img src='images/logos/ubc-logo.gif' /></p>
+                                        </div>
+                                    <img src='images/logos/cihr-logo.jpg' width='200px' />
+                                </p>
+                            </div>
+
+                       </div>
                     </section>
 
                 </section>
@@ -500,6 +689,7 @@
         <script src="git/headjs/dist/1.0.0/head.min.js"></script>
         <script src="git/revealjs/js/reveal.js"></script>
         <script src="assets/js/revealcustom.js"></script>
+        <script src="assets/js/switch_image.js"></script>
         <script src="assets/js/revealinitialize.js"></script>
 
     </body>

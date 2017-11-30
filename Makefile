@@ -52,6 +52,12 @@ publications/pog-sarcoma-paper:
 	else git clone git@github.com:eyzhao/pog-sarcoma-paper.git $@; \
 	fi
 
+publications/mutation-signature-tools:
+	if [ -d $@ ]; \
+	then(cd $@ && git pull); \
+	else git clone git@github.com:eyzhao/mutation-signature-tools.git $@; \
+	fi
+
 #################
 ### Load Data ###
 #################

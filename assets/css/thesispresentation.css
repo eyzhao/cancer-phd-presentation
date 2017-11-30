@@ -49,7 +49,7 @@
 	display: inline;
 }
 
-html.dimbg .slide-background {
+html.dimbg .slide-background.present {
     opacity: 0.4 !important
 }
 
@@ -101,4 +101,17 @@ html.dimbg .slide-background {
 
 .reveal .figcaption {
     font-size: 24
+}
+
+.reveal .acknowledgements {
+    font-size: 16
+}
+
+span.stretch {
+    display:inline-block;
+    -webkit-transform:scale(1,2); /* Safari and Chrome */
+    -moz-transform:scale(1,2); /* Firefox */
+    -ms-transform:scale(1,2); /* IE 9 */
+    -o-transform:scale(1,2); /* Opera */
+    transform:scale(1,2); /* W3C */
 }
