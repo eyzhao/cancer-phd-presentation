@@ -95,9 +95,9 @@
 
                         ### Outline <!-- .element: class="fragment" data-fragment-index="1" -->
 
-                        1. Methodology development
+                        1. Homologous recombination deficiency
                             <!-- .element: class="fragment" data-fragment-index="1" -->
-                        2. Homologous recombination deficiency
+                        2. Methodology development
                             <!-- .element: class="fragment" data-fragment-index="2" -->
                         3. Temporal dissection of mutation signatures
                             <!-- .element: class="fragment" data-fragment-index="3" -->
@@ -119,7 +119,7 @@
                                             src='https://images.nature.com/m685/nature-assets/ncomms/2017/170412/ncomms14953/images/ncomms14953-f2.jpg'
                                             width='800px'
                                         />
-                                        <div class='fragment push' data-fragment-index='1' style='font-size: 24'>
+                                        <div class='fragment push' data-fragment-index='1' class='figcaption'>
                                             Reyes-Chin-Wo et al. (2017), Nat Comm
                                         </div>
 
@@ -129,7 +129,7 @@
                                             src='http://to16.onewalk.ca/images/content/pagebuilder/OW15_Types_Of_Cancer_Pictogram.jpg'
                                             width='800px'
                                         />
-                                        <div class='fragment push' data-fragment-index='2' style='font-size: 24'>
+                                        <div class='fragment push' data-fragment-index='2' class='figcaption'>
                                             OneWalk to Conquer Cancer
                                         </div>
 
@@ -145,7 +145,7 @@
                                             src='images/ding_2012_nature_fig2a_cancer-evolution-explanation.png'
                                             width='800px'
                                         />
-                                        <div class='fragment' data-fragment-index='4' style='font-size: 24'>
+                                        <div class='fragment' data-fragment-index='4' class='figcaption'>
                                             Ding et al. (2012), Nature
                                         </div>
 
@@ -181,72 +181,326 @@
                         </table>
 
                     </script> </section>
+                </section>
+
+                <section>
+                    <section data-background-image='meta/pearson_signature_visualization.svg' data-state="dimbg">
+                        <h3>Mutation Signatures in POG</h3>
+
+                        <img src="images/pog_msig_table.svg" style="drop-shadow: none"/>
+                    </section>
+
+                    <section>
+                        <h3>SignIT</h3>
+                        <table><tr>
+                            <col style="width: 50%" />
+                            <col style="width: 50%" />
+                            <td>
+                                <img src='figures/signit_example_analysis-1.svg' />
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>
+                                        Analyzes uncertainty using MCMC-based Bayesian inference
+                                    </li>
+                                    <li>
+                                        More robust to noise, less likely to overfit
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr></table>
+                    </section>
+
+                    <section>
+                        <h3>SignIT reveals signature bleed</h3>
+
+                        <img src='figures/signature_bleed_demo-1.svg' />
+                    </section>
+
+                    <section>
+                        <h3>SignIT reveals signature bleed</h3>
+
+                        <img src='figures/signit_bleed_example-1.svg' />
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <table><tr>
+                            <col style='width: 40%' />
+                            <col style='width: 60%' />
+                            <td>
+                                <img src='images/dna_damage_explanation/dna_damage-01.png' class="fragment push" data-fragment-index='1' />
+                                <img src='images/dna_damage_explanation/dna_damage-02.png' class="fragment push" data-fragment-index='2' />
+                                <img src='images/dna_damage_explanation/dna_damage-03.png' class="fragment" data-fragment-index='3' />
+                            </td>
+                            <td>
+                                <h3>Homologous Recombination</h3>
+                                <ul>
+                                    <li class='fragment' data-fragment-index='1'>Repairs DNA breaks and cross-links</li>
+                                    <li class='fragment' data-fragment-index='2'>HR Deficiency (HRD) associated with therapeutic implications</li>
+                                    <li class='fragment' data-fragment-index='3'>HRD causes mutation signatures</li>
+                                </ul>
+                            </td>
+                        </tr></table>
+                    </section>
+
+                    <section data-markdown> <script type="text/template">
+                        ### Rationale for Therapy
+                        
+                        - ***BRCA1/2*** <sup>-/-</sup> &rarr; HRD signature
+                        - ***BRCA1/2*** <sup>-/-</sup> &rarr; platinum sensitivity
+
+                        ![HRD platinum sensitivity rationale](./images/hrd_platinum_sensitivity_rationale.png)
+                        
+                        <div class="override">
+                            <div class="conclusion fragment zoom-out" data-fragment-index="1">
+                                Hypothesis: HRD signature &rarr; platinum sensitivity
+                            </div>
+                        </div>
+                    </script> </section>
+
+                    <section data-markdown> <script type="text/template">
+                        ### Rationale for HRD Signatures
+
+                        <table><tr>
+                        <col style='width: 55%' />
+                        <col style='width: 45%' />
+                        <td>
+                            <img src='./images/roy_2012_nat-rev-cancer_hrd-pathway.png' />
+                            <p class='figcaption'>
+                                Roy, Chun & Powell (2017), Nat Rev Cancer
+                            </p>
+
+                            <img src='./images/davies_2017_nat-med_hrdetect-figure.svg' class='fragment' data-fragment-index='1' />
+                            <p class='figcaption fragment' data-fragment-index='1'>
+                                Davies et al. (2017), Nat Med
+                            </p>
+                        </td>
+                        <td>
+                            <ul>
+                                <li> Complexity of the HR response </li>
+                                <li> Signatures are a functional lens </li>
+                                <li class='fragment' data-fragment-index='1'> Improvements in sequencing </li>
+                                <li class='fragment' data-fragment-index='1'> Improvements in signature analysis </li>
+                            </ul>
+                        </td>
+                        </tr></table>
+                    </script> </section>
+
+                    <section data-markdown> <script type="text/template">
+                        <table><tr>
+                            <col style='width: 70%' />
+                            <col style='width: 30%' />
+                            <td>
+                                ![Cohort](publications/brca-signatures-paper/paper/figures/combine_clinical_figures-1.png)
+
+                                <p class='figcaption'>
+                                    Zhao et al., Clin Cancer Res (upcoming)
+                                </p>
+                            </td>
+                            <td>
+                                <h3>Patient Cohort</h3>
+                                <p><strong>93</strong> Breast Cancers</p>
+                                <p><strong>33</strong> Platinum-treated</p>
+                                <p><strong>26</strong> Treated & Imaged</p>
+                            </td>
+                        </tr></table>
+                    </script> </section>
+
+                    <section data-markdown> <script type="text/template">
+                        ### HRD Associated Genes
+                        ![HRD-associated genes](publications/brca-signatures-paper/paper/figures/gene_heatmap_anonymous-1.png)
+
+                        **HRDetect associated with**
+                        - *TP53*, *BRCA1*, *BRCA2*
+                        - Potential Associations: *PTEN*, *RAD50/51*
+                    </script> </section>
+
+                    <section data-markdown> <script type="text/template">
+                        ### Clinical Outcomes
+
+                        <table style="font-size: 32px"><tr>
+                            <td> BRCA1/2 Status </td>
+                            <td> Clinical Improvement </td>
+                            <td> Stable Disease </td>
+                        </tr></table>
+
+                        ![HRDetect ROC](images/hrdetect_roc_curves.png)
+
+                        ![HRDetect ROC](images/hrdetect_prediction_metrics.png)
+                    </script> </section>
+
+                    <section data-markdown> <script type="text/template">
+                        ### Survival and Time on Treatment
+
+                        ![Time on Treatment](publications/brca-signatures-paper/paper/figures/ttf_cox_analysis-1.png)
+
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>HRDetect Status</th>
+                                    <th>OS</th>
+                                    <th>TTF</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>High</th>
+                                    <td>384</td>
+                                    <td>143</td>
+                                </tr>
+
+                                <tr>
+                                    <th>Moderate</th>
+                                    <td>160</td>
+                                    <td>71</td>
+                                </tr>
+
+                                <tr>
+                                    <th>Low</th>
+                                    <td>122</td>
+                                    <td>56</td>
+                                </tr>
+                            </tbody>
+                        </table>
+ 
+                        <div class="override">
+                            <div class="conclusion fragment zoom-out" data-fragment-index="1">
+                                Hypothesis: HRD signature &rarr; platinum sensitivity
+                            </div>
+                        </div>
+                    </script> </section>
+
+                    <section data-markdown><script type = 'text/template'>
+                        ### Limitations
+
+                        Correlation &ne; Causation
+
+                        ![Spurious Correlations](./images/spurious_correlations.png)
+                        <p class='figcaption'>Tyler Vigen, www.tylervigen.com</p>
+                    </script></section>
+                </section>
+
+                <section>
+                    <section data-markdown><script type = 'text/template'>
+                        ### When *BRCA1/2* &ne; HRD status
+
+                        **POG Pancreatic Case Study**
+
+                        - *BRCA1* 185delAG carrier + LOH, expressed in RNA.
+                        - Low sig 3 (18%), SV burden. Moderate HRDetect.
+
+                        ![Clinical Timeline](./images/pancreatic-case/clinical-timeline.png)
+                        <p class='figcaption'>Hui-li Wong<br/>Dan Renouf</p>
+                    </script></section>
+
+                    <section data-markdown><script type = 'text/template'>
+                        <img src='./images/pancreatic-case/mutation-timing.png' width = '70%'/>
+
+                        <img src='./images/pancreatic-case/mutation-timing-data.png' width = '70%' />
+ 
+                        <div class="override">
+                            <div class="conclusion fragment zoom-out" data-fragment-index="1">
+                                Hypothesis: Late-onset <br/> BRCA1 loss &rarr; &darr; HRD signature
+                            </div>
+                        </div>
+                    </script></section>
+
+                    <section data-markdown>
+                        ### Timing the HRD Signature
+
+                        ![](images/pancreatic-case/signature-timing.png)
+                    </section>
+
+                    <section data-markdown>
+                        ### HRDetect: Primary vs. Metastasis
+
+                        ![](images/pancreatic-case/hrdetect.png)
+                    </section>
+
+                    <section data-markdown><script type = 'text/template'>
+                        ### Response to FOLFIRINOX
+
+                        ![](images/pancreatic-case/signature-timing-summary-1.png)
+                        <img src='images/pancreatic-case/signature-timing-summary-2.png' class='fragment' data-fragment-index='1'/>
+                    </script></section>
+
+                    <section data-markdown><script type = 'text/template'>
+                        ### POG Pancreatic Cancer Analysis
+
+                        ![](./images/pancreatic-case/pancreatic-folfirinox-outcomes.png)
+                        <p class='figcaption'>Laura Williamson, Hui-li Wong</p>
+
+                        High HRDetect is associated with HRD pathway variants and response to FOLFIRINOX.
+                    </script></section>
 
                 </section>
 
                 <section>
-                    <section data-markdown>
-                        <textarea data-template>
-                            ## Page title
 
-                            A paragraph with some text and a [link](http://hakim.se).
-                        </textarea>
+                    <section>
+                        <h3>Future Directions: Signatures in POG Sarcomas</h3>
+
+                        <table><tr>
+                            <col style='width: 75%' />
+                            <col style='width: 25%' />
+                            <td>
+                                <img src='publications/pog-sarcoma-paper/analysis/figures/signature-clustering-3.png' />
+                            </td>
+                            <td>
+                                <span style='font-size:16'>
+                                    Collaborators: 
+                                    <ul>
+                                        <li>Erin Pleasance</li>
+                                        <li>Jasleen Grewal</li>
+                                        <li>Nissreen Mohammad</li>
+                                        <li>Christine Simmons</li>
+                                        <li>Tracy Tucker</li>
+                                        <li>Amirrtha Srikanthan</li>
+                                        <li>Rod Rassekh</li>
+                                        <li>Rebecca Deyell</li>
+                                        <li>Anthony Karnezis</li>
+                                        <li>Tony Ng</li>
+                                        <li>Xiaolan Feng</li>
+                                    </ul>
+                                </small>
+                            </td>
+                    </tr></table>
+
+                    Found 8 distinct SNV signatures and 4 SV signatures which delineate histological subtypes.
                     </section>
+
+                    <section>
+                        <h3>Future Directions: Using Mutation Signatures to Inform Diagnosis</h3>
+
+                        <img src='./images/signatures-for-diagnosis.png' />
+                        <p class='figcaption'>Jasleen Grewal</p>
+
+                        Mutation signatures can aid diagnosis, especially in commonly hypermutated tumour types.
+                    </section>
+
                     <section data-markdown>
-                        <script type="text/template">
-                            - Item 1 <!-- .element: class="fragment" data-fragment-index="2" -->
-                            - Item 2 <!-- .element: class="fragment" data-fragment-index="1" -->
-                        </script>
+                        ### Summary
+
+                        - WGS reveals mutation signatures
+                        - Mutation signatures reveal genomic instability
+                        - Genomic instability has implications for therapy
                     </section>
+
+                    <section data-markdown>
+                        Acknowledgements
+                    </section>
+
                 </section>
+
             </div>
         </div>
 
         <script src="git/headjs/dist/1.0.0/head.min.js"></script>
         <script src="git/revealjs/js/reveal.js"></script>
         <script src="assets/js/revealcustom.js"></script>
-        <script>
-            Reveal.initialize({
-                width: 960,
-                height: 720,
-                maxScale: 1.2,
-                controls: false,
-                progress: true,
-                history: true,
-                center: true,
-                slideNumber: true,
-                dependencies: [
-                    { 
-                        src: 'lib/js/classList.js', 
-                        condition: function() { 
-                            return !document.body.classList; 
-                        }
-                    }, {
-                        src: 'git/revealjs/plugin/markdown/marked.js', 
-                        condition: function() { 
-                            return !!document.querySelector( '[data-markdown]' ); 
-                        } 
-                    }, {
-                        src: 'git/revealjs/plugin/markdown/markdown.js', 
-                        condition: function() { 
-                            return !!document.querySelector( '[data-markdown]' ); 
-                        } 
-                    }, { 
-                        src: 'git/revealjs/plugin/highlight/highlight.js', 
-                        async: true, 
-                        callback: function() { 
-                            hljs.initHighlightingOnLoad(); 
-                        } 
-                    }, { 
-                        src: 'git/revealjs/plugin/zoom-js/zoom.js', 
-                        async: true 
-                    }, { 
-                        src: 'git/revealjs/plugin/math/math.js',
-                        async: true 
-                    }
-                ]
-            });
-        </script>
+        <script src="assets/js/revealinitialize.js"></script>
 
     </body>
 </html>
