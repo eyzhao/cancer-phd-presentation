@@ -1,6 +1,7 @@
 .reveal section img {
     background: none;
     border: none;
+    box-shadow: none;
 }
 
 .reveal .slides section .fragment.push {
@@ -46,4 +47,58 @@
 .reveal .slides section .fragment.switch.visible + * {
 	opacity: 1;
 	display: inline;
+}
+
+html.dimbg .slide-background {
+    opacity: 0.4 !important
+}
+
+.reveal td {
+    vertical-align: top !important
+}
+
+.reveal .override {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    -webkit-transform: translate(-50%, 0);
+       -moz-transform: translate(-50%, 0);
+        -ms-transform: translate(-50%, 0);
+         -o-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+}
+
+.reveal .conclusion {
+    display: inline-block;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 25px 25px;
+    font-weight: bold;
+    background-color: #8b743d;
+    color: #f7f3de;
+}
+
+.reveal .slides section .fragment.zoom-out {
+    opacity: 0;
+
+    -webkit-transform: scale( 10 );
+       -moz-transform: scale( 10 );
+        -ms-transform: scale( 10 );
+         -o-transform: scale( 10 );
+            transform: scale( 10 );
+}
+
+.reveal .slides section .fragment.zoom-out.visible {
+    opacity: .95;
+
+    -webkit-transform: scale( 1 );
+       -moz-transform: scale( 1 );
+        -ms-transform: scale( 1 );
+         -o-transform: scale( 1 );
+            transform: scale( 1 );
+}
+
+.reveal .figcaption {
+    font-size: 24
 }

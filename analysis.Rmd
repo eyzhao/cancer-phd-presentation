@@ -1,0 +1,89 @@
+---
+title: "PhD Presentation"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, fig.path = 'figures/', dev = c('pdf', 'png', 'svg'))
+library(tidyverse)
+library(devtools)
+load_all('scripts/SignIT/')
+library(rstan)
+library(nnls)
+library(dbscan)
+library(Rtsne)
+library(cowplot)
+```
+
+```{r signit_example_analysis, fig.height=6, fig.width=3}
+stan_output <- readRDS('meta/signit_output.Rds')
+
+stan_output$exposure_chain %>%
+    mutate(
+      signature = trim_signature_names(signature),
+      exposure = exposure / stan_output$n_mutations
+    ) %>%
+    ggplot(aes(
+      x = factor(signature, levels = 30:1),
+      y = exposure
+    )) +
+    labs(x = 'Signature', y = 'Exposure') +
+    rotate_x_axis_labels() +
+    geom_violin() +
+    coord_flip()
+```
+
+Signature bleed
+
+```{r signit_bleed_example, fig.height = 5, fig.width = 10}
+pairwise_bleed <- signit::plot_signature_pairwise_bleed(stan_output)
+two_signature_hexplot <- plot_two_signature_hexplot(stan_output, 'Signature 3', 'Signature 8')
+
+plot_grid(
+  pairwise_bleed + theme(legend.position = 'none'), 
+  two_signature_hexplot + theme(legend.position = 'none')
+)
+```
+
+```{r signature_bleed_demo, fig.height = 6, fig.width = 6}
+simulated_data <- readRDS('meta/signit_simulated_output.Rds')
+
+get_mode <- function(chain) {
+  d <- density(chain)
+  d$x[d$y == max(d$y)][1]
+}
+
+exposure_modes <- simulated_data$exposure_chain %>%
+  group_by(signature) %>%
+  summarise(exposure_mode = get_mode(exposure))
+
+nnls_plot <- plot_nnls_solution(simulated_data) + labs(y = 'Exposure', title = 'NNLS')
+
+exposure_posterior_plot <- plot_exposure_posteriors(simulated_data) + labs(title = 'SignIT (Posterior)')
+
+exposure_mode_plot <- exposure_modes %>%
+  mutate(
+    signature = trim_signature_names(signature)
+  ) %>%
+  ggplot(aes(
+    x = signature,
+    y = exposure_mode
+  )) +
+  geom_point() +
+  labs(x = 'Signature', y = 'Exposure', title = 'SignIT (Mode)') +
+  theme(
+    axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5)
+  )
+
+plot_grid(
+  nnls_plot,
+  exposure_mode_plot,
+  exposure_posterior_plot,
+  ncol = 1
+)
+```
+
+```{r density_clustering}
+density_clusters <- density_clustering(simulated_data, minPts = 3)
+plot_cluster_solutions(simulated_data, density_clusters)
+```
