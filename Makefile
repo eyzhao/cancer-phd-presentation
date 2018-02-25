@@ -3,7 +3,10 @@ all: \
 	git/headjs \
 	publications/brca-signatures-paper \
 	publications/pog-pancreatic-paper \
-	publications/pog-sarcoma-paper
+	publications/pog-sarcoma-paper \
+	publications/SignIT-paper \
+	publications/pog-signatures-paper \
+	publications/csh_cancer_book_chapter
 
 ######################
 ### Load Reveal.js ###
@@ -55,6 +58,24 @@ publications/mutation-signature-tools:
 	if [ -d $@ ]; \
 	then(cd $@ && git pull); \
 	else git clone git@github.com:eyzhao/mutation-signature-tools.git $@; \
+	fi
+
+publications/SignIT-paper:
+	if [ -d $@ ]; \
+	then(cd $@ && git pull); \
+	else git clone git@github.com:eyzhao/SignIT-paper.git $@; \
+	fi
+
+publications/pog-signatures-paper:
+	if [ -d $@ ]; \
+	then(cd $@ && git pull); \
+	else git clone git@github.com:eyzhao/pog-signatures-paper.git $@; \
+	fi
+
+publications/csh_cancer_book_chapter:
+	if [ -d $@ ]; \
+	then(cd $@ && git pull); \
+	else git clone git@github.com:eyzhao/csh_cancer_book_chapter.git $@; \
 	fi
 
 #################
