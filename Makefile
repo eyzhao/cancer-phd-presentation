@@ -6,7 +6,8 @@ all: \
 	publications/pog-sarcoma-paper \
 	publications/SignIT-paper \
 	publications/pog-signatures-paper \
-	publications/csh_cancer_book_chapter
+	publications/csh_cancer_book_chapter \
+	publications/mutation-signature-tools
 
 ######################
 ### Load Reveal.js ###

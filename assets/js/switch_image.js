@@ -5,15 +5,23 @@ function range(start, end, step) {
   return Array((_end - _start) / _step).fill(0).map((v, i) => _start + (i * _step));
 }
 
+function preloadImage(url)
+{
+    var img=new Image();
+    img.src=url;
+}
+
 var indices = range(1, 31, 1)
 paths = indices.map(i => {
-    return('publications/mutation-signature-tools/example-files/individual_signatures/Signature_' + i.toString())
+    path = 'publications/mutation-signature-tools/example-files/individual_signatures/Signature_' + i.toString() + '.svg';
+    preloadImage(path);
+    return(path);
 })
 
 var currentIdIndex = 0;
 
 function switch_to(indexValue) {
-    var newFilePath = paths[indexValue] + ".svg";
+    var newFilePath = paths[indexValue];
     var switch_element = document.getElementById("signature_figures");
     switch_element.src = newFilePath;
 }

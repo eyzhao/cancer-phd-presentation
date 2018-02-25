@@ -8,7 +8,7 @@
             var link = document.createElement( 'link' );
             link.rel = 'stylesheet';
             link.type = 'text/css';
-            link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'git/revealjs/css/print/pdf.css' : 'git/revealjs/css/print/paper.css';
             document.getElementsByTagName( 'head' )[0].appendChild( link );
         </script>
     </head>
@@ -25,6 +25,8 @@
                         #### Eric Zhao
 
                         POG Talks | November 30, 2017
+
+                        Follow along at http://eyzhao.com/slides.
                     </section>
 
                     <!-- Cancer is a genetic disease -->
@@ -128,9 +130,9 @@
 
                         ### Outline <!-- .element: class="fragment" data-fragment-index="1" -->
 
-                        1. Homologous recombination deficiency
+                        1. How we analyze signatures.
                             <!-- .element: class="fragment" data-fragment-index="1" -->
-                        2. Methodology development
+                        2. Homologous recombination deficiency
                             <!-- .element: class="fragment" data-fragment-index="2" -->
                         3. Temporal dissection of mutation signatures
                             <!-- .element: class="fragment" data-fragment-index="3" -->
@@ -152,7 +154,7 @@
                                             src='https://images.nature.com/m685/nature-assets/ncomms/2017/170412/ncomms14953/images/ncomms14953-f2.jpg'
                                             width='800px'
                                         />
-                                        <div class='fragment push' data-fragment-index='1' class='figcaption'>
+                                        <div class='fragment push figcaption' data-fragment-index='1'>
                                             Reyes-Chin-Wo et al. (2017), Nat Comm
                                         </div>
 
@@ -162,7 +164,7 @@
                                             src='http://to16.onewalk.ca/images/content/pagebuilder/OW15_Types_Of_Cancer_Pictogram.jpg'
                                             width='800px'
                                         />
-                                        <div class='fragment push' data-fragment-index='2' class='figcaption'>
+                                        <div class='fragment push figcaption' data-fragment-index='2' class='figcaption'>
                                             OneWalk to Conquer Cancer
                                         </div>
 
@@ -178,7 +180,7 @@
                                             src='images/ding_2012_nature_fig2a_cancer-evolution-explanation.png'
                                             width='800px'
                                         />
-                                        <div class='fragment' data-fragment-index='4' class='figcaption'>
+                                        <div class='fragment figcaption' data-fragment-index='4' class='figcaption'>
                                             Ding et al. (2012), Nature
                                         </div>
 
@@ -437,10 +439,10 @@
                         </div>
                     </script></section>
 
-                    <section data-markdown>
-                        ### Timing the HRD Signature
+                    <section>
+                        <h3> Timing the HRD Signature </h3>
 
-                        ![](images/pancreatic-case/signature-timing.png)
+                        <img src='images/pancreatic-case/signature-timing.png' width='80%' />
                     </section>
 
                     <section data-markdown>
