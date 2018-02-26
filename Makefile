@@ -3,6 +3,7 @@ all: \
 	git/headjs \
 	publications/brca-signatures-paper \
 	publications/pog-pancreatic-paper \
+	publications/pancreatic-case-paper \
 	publications/pog-sarcoma-paper \
 	publications/SignIT-paper \
 	publications/pog-signatures-paper \
@@ -47,6 +48,12 @@ publications/pog-pancreatic-paper:
 	if [ -d $@ ]; \
 	then(cd $@ && git pull); \
 	else git clone git@github.com:eyzhao/pog-pancreatic-paper.git $@; \
+	fi
+
+publications/pancreatic-case-paper:
+	if [ -d $@ ]; \
+	then(cd $@ && git pull); \
+	else git clone git@github.com:eyzhao/pancreatic-case-paper.git $@; \
 	fi
 
 publications/pog-sarcoma-paper:
