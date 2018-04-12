@@ -13,7 +13,7 @@ function preloadImage(url)
 
 var indices = range(1, 31, 1)
 paths = indices.map(i => {
-    path = 'publications/mutation-signature-tools/example-files/individual_signatures/Signature_' + i.toString() + '.svg';
+    path = 'papers/mutation-signature-tools/example-files/individual_signatures/Signature_' + i.toString() + '.svg';
     preloadImage(path);
     return(path);
 })

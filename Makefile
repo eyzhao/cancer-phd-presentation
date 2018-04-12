@@ -1,14 +1,7 @@
 all: \
 	git/revealjs \
 	git/headjs \
-	publications/brca-signatures-paper \
-	publications/pog-pancreatic-paper \
-	publications/pancreatic-case-paper \
-	publications/pog-sarcoma-paper \
-	publications/SignIT-paper \
-	publications/pog-signatures-paper \
-	publications/csh_cancer_book_chapter \
-	publications/mutation-signature-tools
+	content_chapters
 
 ######################
 ### Load Reveal.js ###
@@ -38,52 +31,48 @@ scripts/SignIT:
 	else git clone git@github.com:eyzhao/SignIT.git $@; \
 	fi
 
-publications/brca-signatures-paper:
+content_chapters: \
+	papers/csh_cancer_book_chapter \
+	papers/mutation-signature-tools \
+	chapter/2 \
+	chapter/3 \
+	chapter/4 \
+	chapter/5
+
+papers/csh_cancer_book_chapter:
 	if [ -d $@ ]; \
 	then(cd $@ && git pull); \
-	else git clone git@github.com:eyzhao/brca-signature-paper.git $@; \
+	else git clone git@github.com:eyzhao/csh_cancer_book_chapter.git $@; \
 	fi
 
-publications/pog-pancreatic-paper:
-	if [ -d $@ ]; \
-	then(cd $@ && git pull); \
-	else git clone git@github.com:eyzhao/pog-pancreatic-paper.git $@; \
-	fi
-
-publications/pancreatic-case-paper:
-	if [ -d $@ ]; \
-	then(cd $@ && git pull); \
-	else git clone git@github.com:eyzhao/pancreatic-case-paper.git $@; \
-	fi
-
-publications/pog-sarcoma-paper:
-	if [ -d $@ ]; \
-	then(cd $@ && git pull); \
-	else git clone git@github.com:eyzhao/pog-sarcoma-paper.git $@; \
-	fi
-
-publications/mutation-signature-tools:
+papers/mutation-signature-tools:
 	if [ -d $@ ]; \
 	then(cd $@ && git pull); \
 	else git clone git@github.com:eyzhao/mutation-signature-tools.git $@; \
 	fi
 
-publications/SignIT-paper:
+chapter/2:
 	if [ -d $@ ]; \
 	then(cd $@ && git pull); \
-	else git clone git@github.com:eyzhao/SignIT-paper.git $@; \
+	else git clone git@github.com:eyzhao/phdthesis_brca.git $@; \
 	fi
 
-publications/pog-signatures-paper:
+chapter/3:
 	if [ -d $@ ]; \
 	then(cd $@ && git pull); \
-	else git clone git@github.com:eyzhao/pog-signatures-paper.git $@; \
+	else git clone git@github.com:eyzhao/phdthesis_signit.git $@; \
 	fi
 
-publications/csh_cancer_book_chapter:
+chapter/4:
 	if [ -d $@ ]; \
 	then(cd $@ && git pull); \
-	else git clone git@github.com:eyzhao/csh_cancer_book_chapter.git $@; \
+	else git clone git@github.com:eyzhao/phdthesis_hrdtiming.git $@; \
+	fi
+
+chapter/5:
+	if [ -d $@ ]; \
+	then(cd $@ && git pull); \
+	else git clone git@github.com:eyzhao/phdthesis_pog500.git $@; \
 	fi
 
 #################

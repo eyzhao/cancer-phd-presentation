@@ -3,7 +3,9 @@
         <link rel="stylesheet" href="git/revealjs/css/reveal.css">
         <link rel="stylesheet" href="git/revealjs/css/theme/white.css">
         <link rel="stylesheet" href="assets/css/thesispresentation.css">
+        <link rel="stylesheet" href="assets/css/thesistheme.css">
 
+        <script src="assets/js/jquery-3.3.1.min.js"></script>
         <script>
             var link = document.createElement( 'link' );
             link.rel = 'stylesheet';
@@ -21,10 +23,10 @@
 
                     <!-- Title slide -->
                     <section data-markdown data-background-image='images/wtsi_signatures.png' data-state='dimbg'>
-                        ## Timing and Clinical Implications of Mutation Signatures in Metastatic Cancer
+                        ## The Clinical Implications and Evolution of Mutational Processes in Metastatic Cancer
                         #### Eric Zhao
 
-                        Genome Stability Meeting | February 26, 2018
+                        BIO Talk | April 13, 2018
 
                         Follow along at http://eyzhao.com/slides.
                     </section>
@@ -109,7 +111,7 @@
                                     <span style='vertical-align: middle; font-size: 80' class='stretch'>
                                         <a href='#nowhere' onClick='switch_previous()'> &lt; </a>
                                     </span>
-                                    <img id='signature_figures' src='publications/mutation-signature-tools/example-files/individual_signatures/Signature_1.svg' style='vertical-align: middle;' width='600px'/>
+                                    <img id='signature_figures' src='papers/mutation-signature-tools/example-files/individual_signatures/Signature_1.svg' style='vertical-align: middle;' width='600px'/>
                                     <span style='vertical-align: middle; font-size: 80' class='stretch'>
                                         <a href='#nowhere' onClick='switch_next()'> &gt; </a>
                                     </span>
@@ -213,7 +215,7 @@
                             <col style='width: 70%' />
                             <col style='width: 30%' />
                             <td>
-                                ![Cohort](publications/brca-signatures-paper/paper/figures/combine_clinical_figures-1.png)
+                                ![Cohort](chapter/2/paper/figures/combine_clinical_figures-1.png)
 
                                 <p class='figcaption'>
                                     Zhao ... Jones et al., Clin Cancer Res 2017
@@ -230,7 +232,7 @@
 
                     <section data-markdown> <script type="text/template">
                         ### HRD Associated Genes
-                        ![HRD-associated genes](publications/brca-signatures-paper/paper/figures/gene_heatmap_anonymous-1.png)
+                        ![HRD-associated genes](chapter/2/paper/figures/gene_heatmap_anonymous-1.png)
 
                     </script> </section>
 
@@ -251,7 +253,7 @@
                     <section data-markdown> <script type="text/template">
                         ### Survival and Time on Treatment
 
-                        ![Time on Treatment](publications/brca-signatures-paper/paper/figures/ttf_cox_analysis-1.png)
+                        ![Time on Treatment](chapter/2/paper/figures/ttf_cox_analysis-1.png)
 
                         <table>
                             <thead>
@@ -292,7 +294,7 @@
                    <section data-markdown><script type = 'text/template'>
                         ### Is n-of-1 HRDetect feasible?
 
-                        ![N-of-1 analysis of HRDetect](publications/brca-signatures-paper/paper/figures/hrdetect_nnls_nmf_comparison-1.png)
+                        ![N-of-1 analysis of HRDetect](chapter/2/paper/figures/hrdetect_nnls_nmf_comparison-1.png)
                     </script></section>
 
                 </section>
@@ -308,7 +310,7 @@
                         <h3>SignIT reveals signature bleed</h3>
 
                         <div style='width: 80%; margin: 0px auto 0px'>
-                            <img src='publications/SignIT-paper/paper/figures/example_signit_output-1.svg' />
+                            <img src='chapter/3/paper/figures/example_signit_output-1.svg' />
                         </div>
                     </section>
 
@@ -317,7 +319,7 @@
 
                         Especially in complex models and with noisy data
 
-                        <img src='publications/SignIT-paper/paper/figures/simulated_data_comparison-1.png' />
+                        <img src='chapter/3/paper/figures/simulated_data_comparison-1.png' />
                     </section>
 
                     <section>
@@ -325,13 +327,13 @@
 
                         SignIT better agrees with NMF.
 
-                        <img src='publications/SignIT-paper/paper/figures/tcga_spearman_scatter-1.svg' />
+                        <img src='chapter/3/paper/figures/tcga_spearman_scatter-1.svg' />
                     </section>
 
                     <section>
                         <h3>SignIT Performs Signature Timing</h3>
 
-                        <img src='publications/SignIT-paper/paper/schematics/mutational_prevalence_explanation.png' />
+                        <img src='chapter/3/paper/schematics/mutational_prevalence_explanation.png' />
                     </section>
 
                     <section>
@@ -341,7 +343,7 @@
                             <col style='width:50%' />
                             <col style='width:50%' />
                             <td>
-                                <img src='publications/SignIT-paper/paper/figures/POG027_signature_timing-1.svg' />
+                                <img src='chapter/3/paper/figures/POG027_signature_timing-1.svg' />
                             </td>
                             <td>
                                 <ol style='list-style-type: upper-alpha;'>
@@ -360,7 +362,7 @@
                             <col style='width:60%' />
                             <col style='width:40%' />
                             <td>
-                                <img src='publications/SignIT-paper/paper/figures/load_mutation_timing_data-1.svg' />
+                                <img src='chapter/3/paper/figures/load_mutation_timing_data-1.svg' />
                             </td>
                             <td>
                                 The mutation signatures of metastatic cancers diverge over time from their paired primaries.
@@ -373,7 +375,7 @@
 
                         Models signatures using Bayesian inference.
 
-                        <img src='publications/SignIT-paper/paper/plate_diagrams/signit_model.png' />
+                        <img src='chapter/3/paper/plate_diagrams/signit_model.png' />
                     </section>
 
                 </section>
@@ -406,7 +408,7 @@
                     <section>
                         <h3> Timing the HRD Signature </h3>
 
-                        <img src='publications/pancreatic-case-paper/paper/schematics/POG357_Mutation_Signature_Evolution.png' width='80%' />
+                        <img src='chapter/4/paper/schematics/POG357_Mutation_Signature_Evolution.png' width='80%' />
                     </section>
 
                     <section data-markdown>
@@ -421,73 +423,41 @@
                         ![](images/pancreatic-case/signature-timing-summary-1.png)
                         <img src='images/pancreatic-case/signature-timing-summary-2.png' class='fragment' data-fragment-index='1'/>
                     </script></section>
-
-                    <section data-markdown><script type = 'text/template'>
-                        ### POG Pancreatic Cancer Analysis
-
-                        <img src='./images/pancreatic-case/pancreatic-folfirinox-outcomes.png' width='80%' />
-                        <p class='figcaption'>Laura Williamson, Hui-li Wong</p>
-
-                        High HRDetect is associated with HRD pathway variants and response to FOLFIRINOX.
-                    </script></section>
-
                 </section>
 
                 <section>
+                    <section data-markdown><script type='text/template'>
+                        ## Mutation Processes in Metastatic Cancer
+
+                        - ~ 90% of cancer death
+                        - Signatures of drug resistance
+                        - Damage from genotoxic chemotherapy
+                    </script></section>
 
                     <section>
-                        <h3>In Progress: Signatures in Metastasis</h3>
-
-                        <img src='publications/pog-signatures-paper/paper/figures/signatures_by_cancertype_clustered-1.png' />
+                        <h3>Approach and Rationale</h3>
                     </section>
 
                     <section>
-                        <h3>Platinum Exposure - HRD Signature</h3>
+                        <h3>Timing of Mutation Signatures</h3>
 
-                        <img src='publications/pog-signatures-paper/paper/figures/timing_bias_hrd-1.png' />
+                        <img src='chapter/5/paper/figures/signatures_by_cancertype_clustered-1.png' />
                     </section>
 
                     <section>
-                        <h3>In Progress: Metastatic Sarcomas</h3>
-
-                        <table><tr>
-                            <col style='width: 65%' />
-                            <col style='width: 35%' />
-                            <td>
-                                <img src='publications/pog-sarcoma-paper/analysis/figures/signature-clustering-3.png' />
-                            </td>
-                            <td>
-                                <span style='font-size:16'>
-                                    <p style='font-weight: bold'>Collaborators:</p>
-                                    <ul>
-                                        <li>Erin Pleasance</li>
-                                        <li>Jasleen Grewal</li>
-                                        <li>Nissreen Mohammad</li>
-                                        <li>Christine Simmons</li>
-                                        <li>Tracy Tucker</li>
-                                        <li>Amirrtha Srikanthan</li>
-                                        <li>Rod Rassekh</li>
-                                        <li>Rebecca Deyell</li>
-                                        <li>Anthony Karnezis</li>
-                                        <li>Tony Ng</li>
-                                        <li>Xiaolan Feng</li>
-                                    </ul>
-                                </small>
-                            </td>
-                    </tr></table>
-
-                    Found 8 distinct SNV signatures and 4 SV signatures which delineate histological subtypes.
+                        <h3>Novel Mutation Signatures</h3>
                     </section>
 
                     <section>
-                        <h3>In Progress: Using Mutation Signatures to Inform Diagnosis</h3>
+                        <h3>HRD Signature Dynamics</h3>
 
-                        <p style='font-size: 35px'>
-                            Mutation signatures can aid diagnosis, especially in commonly hypermutated tumour types.
-                        </p>
+                        <img src='chapter/5/paper/figures/timing_bias_hrd-1.png' />
+                    </section>
 
-                        <img src='./images/signatures-for-diagnosis.png' width='80%' />
-                        <p class='figcaption'>Jasleen Grewal</p>
+                    <section>
+                        <h3>Signature of Platinum Exposure</h3>
+
+                        <img src='chapter/5/paper/figures/timing_bias_hrd-1.png' />
                     </section>
 
                     <section data-markdown data-background-image='images/wtsi_signatures.png' data-state='dimbg'>
