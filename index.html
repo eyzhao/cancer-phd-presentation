@@ -4,6 +4,7 @@
         <link rel="stylesheet" href="git/revealjs/css/theme/white.css">
         <link rel="stylesheet" href="assets/css/thesispresentation.css">
         <link rel="stylesheet" href="assets/css/thesistheme.css">
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
 
         <script src="assets/js/jquery-3.3.1.min.js"></script>
         <script>
@@ -31,9 +32,47 @@
                         Follow along at http://eyzhao.com/slides.
                     </section>
 
+                    <section data-background-image='images/cancer_patient.jpg'>
+                        <div style='color:white; background-color: rgba(0,0,0,0.4); padding: 5px'>
+                            <p>
+                                <strong>The Burden of Cancer</strong>
+                            </p>
+                            <p>
+                                Leading cause of death in Canada <br />
+                                200 000 diagnoses &amp; 80 000 deaths annually. <br />
+                                Nearly 1 in 2 diagnosed, and 1 in 4 will die of cancer. <br />
+                            </p>
+                        </div>
+                    </section>
+
+                    <section data-background-image='images/breast_cancer_histology.jpg'>
+                        <div style='color:white; background-color: rgba(0,0,0,0.6); padding: 5px'>
+                            <p>
+                                <strong>Cancer Biology</strong>
+                            </p>
+                            <p>
+                                Rapidly replicating cell populations &rarr; tumours<br />
+                                Loss of growth inhibition &amp; specialized functions <br />
+                                Angiogenesis and metastasis as tumours grow
+                            </p>
+                        </div>
+                    </section>
+
+                    <section data-background-image='images/dna_strands.png'>
+                        <div style='color:white; background-color: rgba(0,0,0,0.7); padding: 5px'>
+                            <p>
+                                <strong>Cancer is a Genetic Disease</strong>
+                            </p>
+                            <p>
+                                A build-up of genetic mutations <br />
+                                Dysregulation of cell division/death pathways
+                            </p>
+                        </div>
+                    </section>
+
                     <!-- Cancer is a genetic disease -->
-                    <section data-markdown> <script type="text/template">
-                        #### Cancer: a disease of genetic mutations
+                    <section data-markdown data-background-image='images/dna_strands.png' data-state='dimbg'> <script type="text/template">
+                        #### An evolving disease
                         ![Cancer evolution schematic](images/ding_2012_nature_fig2a_cancer-evolution-explanation.png)
                         <small> Ding et al, 2012, Nature </small>
 
@@ -47,7 +86,7 @@
                     </script> </section>
 
                     <!-- Causes of mutation -->
-                    <section data-background-image='http://otherways.be/wp-content/uploads/2015/04/Screen-Shot-2015-04-03-at-10.47.12.png' data-state='dimbg'>
+                    <section data-background-image='images/dna_strands.png' data-state='dimbg'>
                         <h3>Causes of Mutation</h3>
 
                         <div class='fragment' data-fragment-index='1'>
@@ -123,29 +162,28 @@
                         </div>
                     </section>
 
-                    <section>
-                        <h3>Signature Decomposition by NMF</h3>
-
-                        <img src='images/mutation_signature_nmf.png' />
-
-                        Inference of recurrent signatures which stably explain the mutations across many cancer genomes.
-                    </section>
-
                     <!-- Outline of my research -->
                     <section data-markdown> <script type='text/template'>
-                        ### Objective
+                        ### Research Question
 
-                        Determine the **clinical implications** of **genomic instability** and its **temporal evolution** in cancer.
+                        What are the **clinical implications** of **genomic instability** and its **temporal evolution** in metastatic cancer?
 
                         ### Outline <!-- .element: class="fragment" data-fragment-index="1" -->
 
-                        1. Homologous recombination deficiency
+                        1. Homologous Recombination Deficiency
                             <!-- .element: class="fragment" data-fragment-index="1" -->
                         2. Temporal dissection of mutation signatures
                             <!-- .element: class="fragment" data-fragment-index="2" -->
-                        3. Applications of signature timing
+                        3. Mutational Processes of Metastatic Cancer
                             <!-- .element: class="fragment" data-fragment-index="3" -->
                     </script> </section>
+
+                    <section>
+                        <h3> Personalized Oncogenomics </h3>
+
+                        <img src='papers/csh_cancer_book_chapter/figures/genome-data.png' style='width: 80%' />
+                    </section>
+
                 </section>
 
                 <section>
@@ -291,23 +329,53 @@
                         </div>
                     </script> </section>
 
-                   <section data-markdown><script type = 'text/template'>
-                        ### Is n-of-1 HRDetect feasible?
+                    <section data-background-image='images/wtsi_signatures.png' data-state='dimbg'>
+                        <p>
+                            <h3>Summary</h3>
+                            <ul>
+                                <li>Mutation signatures of HRD may predict response to DNA damaging chemotherapy</li>
+                            </ul>
+                        </p>
+                        <br/>
+                        
+                        <p>
+                            <h3> Future Directions </h3>
+                            <ul>
+                                <li>Prospective clinical trial to establish causation</li>
+                                <li>Other drug classes and cancer types</li>
+                            </ul>
+                        </p>
 
-                        ![N-of-1 analysis of HRDetect](chapter/2/paper/figures/hrdetect_nnls_nmf_comparison-1.png)
-                    </script></section>
+                    </section>
 
                 </section>
 
                 <section>
-                    <section data-background-image='meta/pearson_signature_visualization.svg' data-state="dimbg">
-                        <h3>Mutation Signatures in POG</h3>
 
-                        <img src="images/pog_msig_table.svg" style="drop-shadow: none"/>
-                    </section>
+                    <!-- Outline of my research -->
+                    <section data-markdown> <script type='text/template'>
+                        ### Research Question
+
+                        What are the **clinical implications** of **genomic instability** and its **temporal evolution** in metastatic cancer?
+
+                        ### Outline
+
+                        1. Homologous Recombination Deficiency
+                        2. <strong>Temporal dissection of mutation signatures</strong>
+                        3. Mutational Processes of Metastatic Cancer
+                    </script> </section>
 
                     <section>
-                        <h3>SignIT reveals signature bleed</h3>
+                        <h3>Analyzing Mutation Signatures of Individual Tumours</h3>
+
+                        <img src='images/mutation_signature_nmf.png' />
+
+                        NMF requires a large cohort to infer mutation signatures and is computationally demanding.
+                    </section>
+
+
+                    <section>
+                        <h3>SignIT Infers Signatures in Individual Tumours</h3>
 
                         <div style='width: 80%; margin: 0px auto 0px'>
                             <img src='chapter/3/paper/figures/example_signit_output-1.svg' />
@@ -356,16 +424,18 @@
                     </section>
 
                     <section>
-                        <h3>Divergence of Mutational Processes</h3>
+                        <h4>Divergence of Mutational Processes</h4>
 
                         <table><tr>
-                            <col style='width:60%' />
-                            <col style='width:40%' />
+                            <col style='width:65%' />
+                            <col style='width:35%' />
                             <td>
                                 <img src='chapter/3/paper/figures/load_mutation_timing_data-1.svg' />
                             </td>
                             <td>
-                                The mutation signatures of metastatic cancers diverge over time from their paired primaries.
+                                <span style='font-size: 40px;'>
+                                    The mutation signatures of metastatic cancers diverge over time from their paired primaries.
+                                </span>
                             </td>
                         </tr></table>
                     </section>
@@ -386,7 +456,7 @@
 
                         **POG Pancreatic Case Study**
 
-                        - *BRCA1* 185delAG carrier + LOH, expressed in RNA.
+                        - *BRCA1* 185delAG + LOH, expressed in RNA.
                         - Low sig 3 (18%), SV burden. Moderate HRDetect.
 
                         ![Clinical Timeline](./images/pancreatic-case/clinical-timeline.png)
@@ -408,7 +478,7 @@
                     <section>
                         <h3> Timing the HRD Signature </h3>
 
-                        <img src='chapter/4/paper/schematics/POG357_Mutation_Signature_Evolution.png' width='80%' />
+                        <img src='images/pancreatic_case_signature_evolution.png' width='80%' />
                     </section>
 
                     <section data-markdown>
@@ -426,16 +496,68 @@
                 </section>
 
                 <section>
-                    <section data-markdown><script type='text/template'>
-                        ## Mutation Processes in Metastatic Cancer
 
-                        - ~ 90% of cancer death
-                        - Signatures of drug resistance
-                        - Damage from genotoxic chemotherapy
-                    </script></section>
+                    <!-- Outline of my research -->
+                    <section data-markdown> <script type='text/template'>
+                        ### Research Question
+
+                        What are the **clinical implications** of **genomic instability** and its **temporal evolution** in metastatic cancer?
+
+                        ### Outline
+
+                        1. Homologous Recombination Deficiency
+                        2. Temporal dissection of mutation signatures
+                        3. **Mutational Processes of Metastatic Cancer**
+                    </script> </section>
+
+                    <section>
+                        <h2>
+                            Metastasis
+                        </h2>
+
+                        Metastasis &rarr; ~ 90% of cancer-related death.
+
+                        <img
+                            src='images/chaffer-weinberg_2011_metastasis.jpg'
+                        / >
+                        <p class='figcaption'>
+                            Chaffer &amp; Weinberg (2011), Science
+                        </p>
+                    </section>
 
                     <section>
                         <h3>Approach and Rationale</h3>
+
+                        <table><tr>
+                            <col style='width:50%' />
+                            <col style='width:50%' />
+                            <td>
+                                <img src='images/metastasis_rationale.png' />
+                            </td>
+                            <td>
+                                <p>
+                                </p>
+                                <p>
+                                    Very little mutation signature research in metastatic cancers.
+                                </p>
+                            </td>
+                        </tr></table>
+                    </section>
+
+                    <section>
+                        <h3>Mutation Signature Analysis</h3>
+                        <table><tr>
+                            <col style='width:70%' />
+                            <col style='width:30%' />
+                            <td>
+                                <img src='chapter/5/paper/figures/denovo_cosmic_signature_comparison-1.png' />
+                            </td>
+                            <td style='font-size: 26pt'>
+                                <p>570 cancers</p>
+                                <p>NMF successful in 12 cancer types</p>
+                                <p>Clustered into 20 distinct signatures</p>
+                            </td>
+                        </tr></table>
                     </section>
 
                     <section>
@@ -446,6 +568,33 @@
 
                     <section>
                         <h3>Novel Mutation Signatures</h3>
+
+                        <table><tr>
+                            <col style='width:85%' />
+                            <col style='width:15%' />
+                            <td>
+                                <img src='chapter/5/paper/figures/novel_metastatic_signatures_plot_circular-1.png' />
+                            </td>
+                            <td>
+                                <p>
+                                    <strong>Endogenous:</strong> M1, M4, M5
+                                </p>
+                                <p>
+                                    <strong>Chemotherapy:</strong> M3
+                                </p>
+                            </td>
+                        </tr></table>
+                    </section>
+
+                    <section data-background-image='images/train.jpg' data-state='dimbg'>
+                        <h3>HRD Reversion and Drug Resistance</h3>
+                        
+                        <ul>
+                            <li>&uarr; <strong>HRD activity</strong> <sup>-/-</sup> &rarr; platinum sensitivity</li>
+                            <li>&darr; <strong>HRD activity</strong> <sup>-/-</sup> &rarr; platinum resistance</li>
+                        </ul>
+
+                        <img src='images/brca_signature_activity.png' width='80%' />
                     </section>
 
                     <section>
@@ -457,17 +606,37 @@
                     <section>
                         <h3>Signature of Platinum Exposure</h3>
 
-                        <img src='chapter/5/paper/figures/timing_bias_hrd-1.png' />
+                        <img src='images/platinum_signatures_crosslinks.png' />
+
+                        Signatures of platinum exposure <br /> (Boot et al. 2018, Genome Res.)
                     </section>
 
-                    <section data-markdown data-background-image='images/wtsi_signatures.png' data-state='dimbg'>
-                        ### Summary
+                    <section>
+                        <h3>Signature of Platinum Exposure</h3>
 
-                        - WGS reveals mutation signatures
-                        - Mutation signatures reveal genomic instability
-                        - Genomic instability has implications for therapy
+                        <img src='images/platinum_signature_exposures.png' />
                     </section>
 
+                    <section data-background-image='images/wtsi_signatures.png' data-state='dimbg'>
+                        <p>
+                            <h3>Summary</h3>
+                            <ul>
+                                <li>Metastatic mutation signatures reveal potential mechanisms of drug exposure and resistance</li>
+                            </ul>
+                        </p>
+                        <br/>
+                        
+                        <p>
+                            <h3>Future Directions</h3>
+                            <ul>
+                                <li>In vitro assays of oxaliplatin exposure</li>
+                            </ul>
+                        </p>
+                    </section>
+
+                </section>
+
+                <section>
                     <section>
                         Acknowledgements
 
@@ -636,6 +805,16 @@
 
                        </div>
                     </section>
+
+                </section>
+
+                <section>
+
+                   <section data-markdown><script type = 'text/template'>
+                        ### Is n-of-1 HRDetect feasible?
+
+                        ![N-of-1 analysis of HRDetect](chapter/2/paper/figures/hrdetect_nnls_nmf_comparison-1.png)
+                    </script></section>
 
                 </section>
 
