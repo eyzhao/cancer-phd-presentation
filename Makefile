@@ -1,23 +1,3 @@
-all: \
-	git/revealjs \
-	git/headjs \
-	content_chapters
-
-######################
-### Load Reveal.js ###
-######################
-
-git/revealjs:
-	if [ -d $@ ]; \
-	then (cd $@ && git pull); \
-	else git clone https://github.com/hakimel/reveal.js.git $@; \
-	fi
-
-git/headjs:
-	if [ -d $@ ]; \
-	then (cd $@ && git pull); \
-	else git clone https://github.com/headjs/headjs.git $@; \
-	fi
 
 scripts/pipelines:
 	if [ -d $@ ]; \
@@ -29,50 +9,6 @@ scripts/SignIT:
 	if [ -d $@ ]; \
 	then(cd $@ && git pull); \
 	else git clone git@github.com:eyzhao/SignIT.git $@; \
-	fi
-
-content_chapters: \
-	papers/csh_cancer_book_chapter \
-	papers/mutation-signature-tools \
-	chapter/2 \
-	chapter/3 \
-	chapter/4 \
-	chapter/5
-
-papers/csh_cancer_book_chapter:
-	if [ -d $@ ]; \
-	then(cd $@ && git pull); \
-	else git clone git@github.com:eyzhao/csh_cancer_book_chapter.git $@; \
-	fi
-
-papers/mutation-signature-tools:
-	if [ -d $@ ]; \
-	then(cd $@ && git pull); \
-	else git clone git@github.com:eyzhao/mutation-signature-tools.git $@; \
-	fi
-
-chapter/2:
-	if [ -d $@ ]; \
-	then(cd $@ && git pull); \
-	else git clone git@github.com:eyzhao/phdthesis_brca.git $@; \
-	fi
-
-chapter/3:
-	if [ -d $@ ]; \
-	then(cd $@ && git pull); \
-	else git clone git@github.com:eyzhao/phdthesis_signit.git $@; \
-	fi
-
-chapter/4:
-	if [ -d $@ ]; \
-	then(cd $@ && git pull); \
-	else git clone git@github.com:eyzhao/phdthesis_hrdtiming.git $@; \
-	fi
-
-chapter/5:
-	if [ -d $@ ]; \
-	then(cd $@ && git pull); \
-	else git clone git@github.com:eyzhao/phdthesis_pog500.git $@; \
 	fi
 
 #################
