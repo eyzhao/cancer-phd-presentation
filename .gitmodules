@@ -4,6 +4,3 @@
 [submodule "git/headjs"]
 	path = git/headjs
 	url = https://github.com/headjs/headjs.git
-[submodule "papers/mutation-signature-tools"]
-	path = papers/mutation-signature-tools
-	url = git@github.com:eyzhao/mutation-signature-tools.git
