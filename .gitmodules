@@ -1,0 +1,12 @@
+[submodule "chapter/2"]
+	path = chapter/2
+	url = git@github.com:eyzhao/phdthesis_brca.git
+[submodule "chapter/3"]
+	path = chapter/3
+	url = git@github.com:eyzhao/phdthesis_signit.git
+[submodule "chapter/4"]
+	path = chapter/4
+	url = git@github.com:eyzhao/phdthesis_hrdtiming.git
+[submodule "chapter/5"]
+	path = chapter/5
+	url = git@github.com:eyzhao/phdthesis_pog500.git
