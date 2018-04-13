@@ -1,9 +1,6 @@
 [submodule "git/revealjs"]
 	path = git/revealjs
 	url = https://github.com/hakimel/reveal.js.git
-[submodule "git/headjs"]
-	path = git/headjs
-	url = https://github.com/headjs/headjs.git
 [submodule "papers/mutation-signature-tools"]
 	path = papers/mutation-signature-tools
 	url = https://github.com/eyzhao/mutation-signature-tools.git
