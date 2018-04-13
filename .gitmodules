@@ -1,24 +1,9 @@
-[submodule "chapter/2"]
-	path = chapter/2
-	url = git@github.com:eyzhao/phdthesis_brca.git
-[submodule "chapter/3"]
-	path = chapter/3
-	url = git@github.com:eyzhao/phdthesis_signit.git
-[submodule "chapter/4"]
-	path = chapter/4
-	url = git@github.com:eyzhao/phdthesis_hrdtiming.git
-[submodule "chapter/5"]
-	path = chapter/5
-	url = git@github.com:eyzhao/phdthesis_pog500.git
 [submodule "git/revealjs"]
 	path = git/revealjs
 	url = https://github.com/hakimel/reveal.js.git
 [submodule "git/headjs"]
 	path = git/headjs
 	url = https://github.com/headjs/headjs.git
-[submodule "papers/csh_cancer_book_chapter"]
-	path = papers/csh_cancer_book_chapter
-	url = git@github.com:eyzhao/csh_cancer_book_chapter.git
 [submodule "papers/mutation-signature-tools"]
 	path = papers/mutation-signature-tools
 	url = git@github.com:eyzhao/mutation-signature-tools.git

@@ -1,3 +1,15 @@
+figures:
+	rm -rf figures && \
+	if [ -d $@ ]; \
+	then (cd $@ && git pull); \
+	else git clone git@github.com:eyzhao/phdthesis.git $@; \
+	fi && \
+	cd phdthesis && \
+	make figures schematics plate_diagrams && \
+	cd .. && \
+	cp phdthesis/figures/*.png figures && \
+	cp phdthesis/schematics/*.png figures && \
+	cp phdthesis/plate_diagrams/*.png figures
 
 scripts/pipelines:
 	if [ -d $@ ]; \
