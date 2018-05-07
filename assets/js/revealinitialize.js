@@ -14,26 +14,26 @@ Reveal.initialize({
                 return !document.body.classList; 
             }
         }, {
-            src: 'git/revealjs/plugin/markdown/marked.js', 
+            src: 'packages/revealjs/plugin/markdown/marked.js', 
             condition: function() { 
                 return !!document.querySelector( '[data-markdown]' ); 
             } 
         }, {
-            src: 'git/revealjs/plugin/markdown/markdown.js', 
+            src: 'packages/revealjs/plugin/markdown/markdown.js', 
             condition: function() { 
                 return !!document.querySelector( '[data-markdown]' ); 
             } 
         }, { 
-            src: 'git/revealjs/plugin/highlight/highlight.js', 
+            src: 'packages/revealjs/plugin/highlight/highlight.js', 
             async: true, 
             callback: function() { 
                 hljs.initHighlightingOnLoad(); 
             } 
         }, { 
-            src: 'git/revealjs/plugin/zoom-js/zoom.js', 
+            src: 'packages/revealjs/plugin/zoom-js/zoom.js', 
             async: true 
         }, { 
-            src: 'git/revealjs/plugin/math/math.js',
+            src: 'packages/revealjs/plugin/math/math.js',
             async: true 
         }
     ]

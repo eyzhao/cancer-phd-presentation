@@ -1,7 +1,7 @@
 <html>
     <head>
-        <link rel="stylesheet" href="git/revealjs/css/reveal.css">
-        <link rel="stylesheet" href="git/revealjs/css/theme/white.css">
+        <link rel="stylesheet" href="packages/revealjs/css/reveal.css">
+        <link rel="stylesheet" href="packages/revealjs/css/theme/white.css">
         <link rel="stylesheet" href="assets/css/thesispresentation.css">
         <link rel="stylesheet" href="assets/css/thesistheme.css">
         <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
@@ -13,7 +13,7 @@
             }
 
             .reveal .slide-number {
-                font-size: 24px !important;
+                font-size: 42px !important;
             }
         </style>
 
@@ -22,7 +22,7 @@
             var link = document.createElement( 'link' );
             link.rel = 'stylesheet';
             link.type = 'text/css';
-            link.href = window.location.search.match( /print-pdf/gi ) ? 'git/revealjs/css/print/pdf.css' : 'git/revealjs/css/print/paper.css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'packages/revealjs/css/print/pdf.css' : 'packages/revealjs/css/print/paper.css';
             document.getElementsByTagName( 'head' )[0].appendChild( link );
         </script>
     </head>
@@ -32,11 +32,35 @@
             <div class="slides">
                 <!-- Introduction -->
                 <section>
+                    <section>
+                    </section>
+
+                    <section data-background='#002145'>
+                        <h2>First, some acknowledgements</h2>
+                    </section>
+
+                    <section>
+                        Thank you to my family.
+
+                        <img src='images/acknowledgements/family.jpg' />
+                    </section>
+
+                    <section>
+                        Thank you to all of you!
+                    </section>
+
+                    <section>
+                        It's been a great five years.
+
+                        <img src='images/acknowledgements/collage.png' />
+                    </section>
 
                     <!-- Title slide -->
-                    <section data-markdown data-background-image='images/wtsi_signatures.png' data-state='dimbg'>
-                        ## The Clinical Implications and Evolution of Mutational Processes in Metastatic Cancer
-                        #### Eric Zhao
+                    <section data-background-image='images/wtsi_signatures.png' data-state='dimbg'>
+                        <h2 style='line-height: 100px'>
+                            The <hi>Clinical Implications</hi> and <hi>Evolution</hi> of <hi>Mutational Processes</hi> in <hi>Metastatic Cancer</hi>
+                        </h2>
+                        <h4> Eric Zhao </h4>
 
                         PhD Defence | May 7, 2018 | ezhao@bcgsc.ca
                     </section>
@@ -44,12 +68,10 @@
                     <section data-background-image='images/cancer_patient.jpg'>
                         <div style='color:white; background-color: rgba(0,0,0,0.4); padding: 5px'>
                             <p>
-                                <strong>The Burden of Cancer</strong>
+                                <strong>Cancer is the leading cause of death in Canada</strong>
                             </p>
                             <p>
-                                Leading cause of death in Canada <br />
                                 200 000 diagnoses &amp; 80 000 deaths annually. <br />
-                                Nearly 1 in 2 diagnosed, and 1 in 4 will die of cancer. <br />
                             </p>
                         </div>
                     </section>
@@ -57,7 +79,7 @@
                     <section data-background-image='images/breast_cancer_histology.jpg'>
                         <div style='color:white; background-color: rgba(0,0,0,0.6); padding: 5px'>
                             <p>
-                                <strong>Cancer Biology</strong>
+                                <strong>The Biology of Cancer</strong>
                             </p>
                             <p>
                                 Rapidly replicating cell populations &rarr; tumours<br />
@@ -70,7 +92,7 @@
                     <section data-background-image='images/dna_strands.png'>
                         <div style='color:white; background-color: rgba(0,0,0,0.7); padding: 5px'>
                             <p>
-                                <strong>Cancer is a Genetic Disease</strong>
+                                <strong>Cancer has a Strong Genetic Component</strong>
                             </p>
                             <p>
                                 A build-up of genetic mutations <br />
@@ -93,6 +115,20 @@
                             &mdash; Peter Carey Nowell (1976, Science)
                         </p>
                     </script> </section>
+
+
+
+                    <section>
+                        <h3> Personalized Oncogenomics</h3>
+
+                        <img src='images/pog_workflow-01.png' />
+                    </section>
+
+                    <section>
+                        <h3> Personalized Oncogenomics</h3>
+
+                        <img src='figures/genome-data.png' style='width: 80%' />
+                    </section>
 
                     <!-- Causes of mutation -->
                     <section data-background-image='images/dna_strands.png' data-state='dimbg'>
@@ -135,7 +171,7 @@
                     </section>
 
                     <!-- Mutation rates in cancer -->
-                    <section data-markdown> <script type="text/template">
+                    <section data-markdown data-background-image='images/dna_strands.png' data-state='dimbg'> <script type="text/template">
                         ### Mutagenesis in Cancer
                         ![Mutation rates in cancer](images/alexandrov2013_nature_mutation-rates.jpg)
                         <small> Alexandrov et al, 2013, Nature </small>
@@ -145,7 +181,7 @@
                     </script> </section>
 
                     <!-- Introduction to mutation signatures -->
-                    <section id='signatures'>
+                    <section id='signatures' data-background-image='images/dna_strands.png' data-state='dimbg'>
                         <h3>Mutation Signatures</h3>
 
                         Mutation signatures are associated with etiologies like
@@ -169,12 +205,6 @@
                                 <img src='images/signature-legend.png'/>
                             </div>
                         </div>
-                    </section>
-
-                    <section>
-                        <h3> Personalized Oncogenomics </h3>
-
-                        <img src='figures/genome-data.png' style='width: 80%' />
                     </section>
 
                     <!-- Outline of my research -->
@@ -216,7 +246,7 @@
                         </tr></table>
                     </section>
 
-                    <section data-markdown data-background-image='images/train.jpg' data-state='dimbg'> <script type="text/template">
+                    <section data-markdown> <script type="text/template">
                         ### Rationale for Therapy
                         
                         - ***BRCA1/2*** <sup>-/-</sup> &rarr; HRD signature
@@ -259,8 +289,7 @@
 
                     <section data-markdown> <script type="text/template">
                         ### HRD Associated Genes
-                        ![HRD-associated genes](figures/gene_heatmap_anonymous-1.png)
-
+                        ![HRD-associated genes](images/gene_heatmap_anonymous-1.png)
                     </script> </section>
 
                     <section data-markdown> <script type="text/template">
@@ -280,7 +309,7 @@
                     <section data-background-image='images/wtsi_signatures.png' data-state='dimbg'>
                         <div style='background-color: rgba(255,255,255,0.5); padding: 5px'>
                             <p>
-                                <h3>Summary</h3>
+                                <h3>Chapter 2 Summary</h3>
                                 <ul>
                                     <li>Mutation signatures of HRD may predict response to DNA damaging chemotherapy</li>
                                 </ul>
@@ -296,75 +325,39 @@
                             </p>
                         </div>
                     </section>
+                </section>
 
-                    <section>
-                        Supplemental slides.
-                    </section>
+                <section>
+                    <section data-markdown><script type = 'text/template'>
+                        ### When *BRCA1/2* &ne; HRD status
 
-                    <section data-markdown> <script type="text/template">
-                        ### Survival and Time on Treatment
+                        **POG Pancreatic Case Study**
 
-                        ![Time on Treatment](figures/ttf_cox_analysis-1.png)
+                        - *BRCA1* 185delAG + LOH, expressed in RNA.
+                        - Low sig 3 (18%), SV burden. Moderate HRDetect.
 
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>HRDetect Status</th>
-                                    <th>OS</th>
-                                    <th>TTF</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th>High</th>
-                                    <td>384</td>
-                                    <td>143</td>
-                                </tr>
+                        ![Clinical Timeline](./images/pancreatic-case/clinical-timeline.png)
+                        <p class='figcaption'>Hui-li Wong<br/>Dan Renouf</p>
+                    </script></section>
 
-                                <tr>
-                                    <th>Moderate</th>
-                                    <td>160</td>
-                                    <td>71</td>
-                                </tr>
+                    <section data-markdown> <script type='text/template'>
+                        #### Did late timing blunt the HRD signature?
 
-                                <tr>
-                                    <th>Low</th>
-                                    <td>122</td>
-                                    <td>56</td>
-                                </tr>
-                            </tbody>
-                        </table>
- 
+                        ![](images/pancreatic-case/signature-timing-summary-1.png)
+
+                        **Hypothesis** <br />
+                        <p style='font-size: 34'>
+                            Late 2nd hit to *BRCA1* &rarr; not enough time to develop signature?
+                        </p>
+
                         <div class="override">
                             <div class="conclusion fragment zoom-out" data-fragment-index="1">
-                                Hypothesis: HRD signature &rarr; platinum sensitivity
+                                Need to estimate the **activity** of mutation process, not its absolute value.
                             </div>
                         </div>
                     </script> </section>
 
-                    <section data-markdown> <script type="text/template">
-                        <table><tr>
-                            <col style='width: 70%' />
-                            <col style='width: 30%' />
-                            <td>
-                                ![Cohort](figures/combine_clinical_figures-1.png)
 
-                                <p class='figcaption'>
-                                    Zhao ... Jones et al., Clin Cancer Res 2017
-                                </p>
-                            </td>
-                            <td>
-                                <h3>Patient Cohort</h3>
-                                <p><strong>93</strong> Breast Cancers</p>
-                                <p><strong>33</strong> Platinum-treated</p>
-                                <p><strong>26</strong> Treated & Imaged</p>
-                            </td>
-                        </tr></table>
-                    </script> </section>
-
-                </section>
-
-                <section>
                     <!-- Outline of my research -->
                     <section data-markdown> <script type='text/template'>
                         ### Research Question
@@ -377,42 +370,6 @@
                         2. <strong>Temporal dissection of mutation signatures</strong>
                         3. Mutational Processes of Metastatic Cancer
                     </script> </section>
-
-                    <section data-background-image='images/dna_strands.png'>
-                        <div style='color:white; background-color: rgba(0,0,0,0.7); padding: 5px'>
-                            <p>
-                                <strong>Personalizing Mutation Signature Analysis</strong>
-                            </p>
-                            <p>
-                                Clinical application requires individualized signatures. <br />
-                                Mutation signature methods work on large cohorts. <br />
-                            </p>
-                        </div>
-                    </section>
-
-                    <section>
-                        <h3>Analyzing Mutation Signatures of Individual Tumours</h3>
-
-                        <img src='images/mutation_signature_nmf.png' />
-
-                        NMF requires a large cohort to infer mutation signatures and is computationally demanding.
-                    </section>
-
-                    <section>
-                        <h4>SignIT Probabilistically Models Individual Signatures</h4>
-
-                        <div style='width: 80%; margin: 0px auto 0px'>
-                            <img src='figures/example_signit_output-1.png' />
-                        </div>
-                    </section>
-
-                    <section>
-                        <h4>SignIT agrees better with NMF than other methods</h4>
-
-                        SignIT better agrees with NMF.
-
-                        <img src='figures/tcga_spearman_scatter-1.png' />
-                    </section>
 
                     <section data-background-image='images/rock_layers.jpg'>
                         <div style='color:white; background-color: rgba(0,0,0,0.6); padding: 5px'>
@@ -427,13 +384,22 @@
                     </section>
 
                     <section>
-                        <h3>SignIT Performs Signature Timing</h3>
+                        <h3>How to put mutations on a timeline.</h3>
 
                         <img src='figures/mutational_prevalence_explanation.png' />
                     </section>
 
                     <section>
-                        <h4>Testing SignIT in Paired Primary and Metastatic Cancers</h4>
+                        <h3>SignIT</h3>
+                        
+                        Infers <strong>mutation signatures</strong> and their <strong>temporal evolution</strong> using a Bayesian model.
+
+                        <img src='figures/signit_model.png' />
+ 
+                    </section>
+
+                    <section>
+                        <h4>Validating SignIT using Paired Primary and Metastatic Tumours</h4>
 
                         <img src='images/chaffer-weinberg_2011_metastasis.jpg' />
                         <p class='figcaption'>
@@ -444,105 +410,81 @@
                     <section>
                         <h4>SignIT Reconstructs Primary Signatures</h4>
 
-                        <table><tr>
-                            <col style='width:50%' />
-                            <col style='width:50%' />
-                            <td>
-                                <img src='figures/POG027_signature_timing-1.png' />
-                            </td>
-                            <td>
-                                The early signatures (red) resemble the matched primary cancer
-                                mutation signatures (C).
-                            </td>
-                        </tr></table>
+                        Early mutation signatures (red) resemble primary.
+
+                        <img src='images/signature_timing_with_comparison.png' width='80%' />
                     </section>
 
                     <section>
-                        <h4>Mutation Signatures Diverge Over Time</h4>
-
+                        <strong>Signatures diverge from the primary over time</strong>
                         <table><tr>
-                            <col style='width:65%' />
-                            <col style='width:35%' />
+                            <col style='width:30%' />
+                            <col style='width:70%' />
+                            <td>
+                                <img src='images/divergence_plot_explanation-01.png' />
+                            </td>
                             <td>
                                 <img src='figures/load_mutation_timing_data-1.png' />
                             </td>
-                            <td>
-                                <span style='font-size: 40px;'>
-                                    The mutation signatures of metastatic cancers diverge over time from their paired primaries.
-                                </span>
-                            </td>
                         </tr></table>
                     </section>
+
+                    <section data-markdown> <script type='text/template'>
+                        #### Did late timing blunt the HRD signature?
+
+                        ![](images/pancreatic-case/signature-timing-summary-1.png)
+
+                        **Hypothesis** <br />
+                        <p style='font-size: 34'>
+                            Late 2nd hit to *BRCA1* &rarr; not enough time to develop signature?
+                        </p>
+                    </script> </section>
+
+                    <section>
+
+                        <table><tr>
+                            <col style='width:40%' />
+                            <col style='width:60%' />
+
+                            <td>
+                                <strong>Pancreatic Tumour Showed Late HRD Activity</strong>
+
+                                <p>
+                                    HRD signatures (3 and 8) introduced new mutations.
+                                </p>
+
+                                <p>
+                                    SignIT identifies late activation of HRD.
+                                </p>
+                            </td>
+
+                            <td>
+                                <img src='images/pancreatic_case_signature_evolution.png' width='80%' />
+                            </td>
+                            
+                        </tr></table>
+                    </section>
+
+                    <section data-markdown><script type = 'text/template'>
+                        #### Patient Responded to FOLFIRINOX
+
+                        <img src='images/pancreatic-case/signature-timing-summary-1.png' width='90%' />
+                        <img src='images/pancreatic-case/signature-timing-summary-2.png' width='90%' />
+                    </script></section>
 
                     <section data-background-image='images/wtsi_signatures.png' data-state='dimbg'>
                         <div style='background-color: rgba(255,255,255,0.5); padding: 5px'>
                             <p>
-                                <h3>Summary</h3>
+                                <h3>Chapter 3 & 4 Summary</h3>
                                 <ul>
-                                    <li>SignIT improves the individualized signature analysis and enables temporal dissection.</li>
-                                    <li>Mutation signatures demonstrate evolution between primary and metastatic tumours.</li>
+                                    <li><hi>SignIT</hi> enables temporal dissection of mutation signatures.</li>
+                                    <li>Mutation signatures <hi>evolve</hi> over time.</li>
+                                    <li>Signature timing has potential <hi>clinical relevance</hi>.</li>
                                 </ul>
                             </p>
                             <br/>
                         </div>
                     </section>
-
-                    <section>
-                        Supplemental Slides.
-                    </section>
-
-                    <section>
-                        <h3>SignIT</h3>
-
-                        Models signatures using Bayesian inference.
-
-                        <img src='figures/signit_model.png' />
-                    </section>
-
-                    <section>
-                        <h3>SignIT improves signature accuracy</h3>
-
-                        Especially in complex models and with noisy data
-
-                        <img src='figures/simulated_data_comparison-1.png' />
-                    </section>
-
-                    <section data-markdown><script type = 'text/template'>
-                        ### When *BRCA1/2* &ne; HRD status
-
-                        **POG Pancreatic Case Study**
-
-                        - *BRCA1* 185delAG + LOH, expressed in RNA.
-                        - Low sig 3 (18%), SV burden. Moderate HRDetect.
-
-                        ![Clinical Timeline](./images/pancreatic-case/clinical-timeline.png)
-                        <p class='figcaption'>Hui-li Wong<br/>Dan Renouf</p>
-                    </script></section>
-
-                    <section data-markdown><script type = 'text/template'>
-                        <img src='./images/pancreatic-case/mutation-timing.png' width = '60%'/>
-
-                        <img src='./images/pancreatic-case/mutation-timing-data.png' width = '70%' />
- 
-                        <div class="override">
-                            <div class="conclusion fragment zoom-out" data-fragment-index="1">
-                                Hypothesis: Late-onset <br/> BRCA1 loss &rarr; &darr; HRD signature
-                            </div>
-                        </div>
-                    </script></section>
-
-                    <section>
-                        <h3> Timing the HRD Signature </h3>
-
-                        <img src='images/pancreatic_case_signature_evolution.png' width='80%' />
-                    </section>
-
-                    <section data-markdown><script type = 'text/template'>
-                        ### Response to FOLFIRINOX
-
-                        ![](images/pancreatic-case/signature-timing-summary-1.png)
-                        <img src='images/pancreatic-case/signature-timing-summary-2.png' class='fragment' data-fragment-index='1'/>
-                    </script></section>
                 </section>
 
                 <section>
@@ -613,7 +555,7 @@
                                     <strong>20</strong> signatures.
                                 </p>
                                 <p>
-                                    <strong>9</strong> "novel".
+                                    <strong>6</strong> "novel".
                                 </p>
                             </td>
                         </tr></table>
@@ -626,36 +568,47 @@
                     </section>
 
                     <section>
+                        <h3>Do Chemotherapies Cause Mutation Signatures?</h3>
+                        <table><tr>
+                            <col style='width: 50%' />
+                            <col style='width: 50%' />
+                            <td>
+                                <img src='images/dna_damage_explanation/dna_damaging_chemotherapy.png' />
+                            </td>
+                            <td>
+                                Cyclophosphamide <br />
+                                Cisplatin <br />
+                                Fluorouracil <br />
+                                Doxorubicin <br />
+                                Capecitabine <br />
+                                Carboplatin <br />
+                                Oxaliplatin
+                            </td>
+                        </tr></table>
+
+                    </section>
+
+                    <section>
                         <h3>Signature of Platinum Exposure</h3>
 
                         <img src='images/platinum_signatures_crosslinks.png' />
 
-                        Signatures of platinum exposure <br /> (Boot et al. 2018, Genome Res.)
-                    </section>
-
-                    <section>
-                        <h3>Signature of Platinum Exposure</h3>
-
-                        <img src='images/platinum_signature_exposures.png' />
-                    </section>
-
-                    <section>
-                        <h3>BRCA Reversion &rarr; Platinum Resistance</h3>
-                        
                         <ul>
-                            <li><strong>BRCA mutation</strong> <sup>-/-</sup> &rarr; platinum sensitivity</li>
-                            <li><strong>BRCA reversion</strong> <sup>-/-</sup> &rarr; platinum resistance</li>
+                            <li>
+                                Cisplatin / Carboplatin &rarr; Signature M3
+                            </li>
+                            <li>
+                                Oxaliplatin &rarr; Signature 17
+                            </li>
                         </ul>
-
-                        <img src='images/brca_reversion_explanation.png' width='80%' />
                     </section>
 
-                    <section data-background-image='images/train.jpg' data-state='dimbg'>
+                    <section>
                         <h3>HRD Reversion and Drug Resistance</h3>
                         
                         <ul>
-                            <li>&uarr; <strong>HRD activity</strong> <sup>-/-</sup> &rarr; platinum sensitivity</li>
-                            <li>&darr; <strong>HRD activity</strong> <sup>-/-</sup> &rarr; platinum resistance</li>
+                            <li>&uarr; <strong>HRD activity</strong> &rarr; platinum sensitivity</li>
+                            <li>&darr; <strong>HRD activity</strong> &rarr; platinum resistance</li>
                         </ul>
 
                         <img src='images/brca_signature_activity.png' width='80%' />
@@ -663,52 +616,31 @@
 
                     <section>
                         <h3>HRD Signature Dynamics</h3>
+                        <table><tr>
+                            <col style='width: 50%' />
+                            <col style='width: 50%' />
+                            <td>
+                                <img src='images/timing_bias_hrd.png' />
+                            </td>
+                            <td>
+                                Platinum exposure may induce the restoration of HR function.
+                            </td>
+                        </tr></table>
 
-                        <img src='figures/timing_bias_hrd-1.png' />
+
                     </section>
 
                     <section data-background-image='images/wtsi_signatures.png' data-state='dimbg'>
                         <div style='background-color: rgba(255,255,255,0.5); padding: 5px'>
                             <p>
-                                <h3>Summary</h3>
+                                <h3>Chapter 5 Summary</h3>
                                 <ul>
-                                    <li>Metastatic mutation signatures reveal potential mechanisms of drug exposure and resistance</li>
+                                    <li>Metastatic mutation signatures may reveal mechanisms of <hi>drug exposure</hi> and <hi>resistance</hi></li>
                                 </ul>
                             </p>
                             <br/>
-                            
-                            <p>
-                                <h3>Future Directions</h3>
-                                <ul>
-                                    <li>Genotype-exposure interactions</li>
-                                    <li>In vitro assays of oxaliplatin exposure</li>
-                                </ul>
-                            </p>
                         </div>
                     </section>
-
-                    <section>
-                        Supplemental Slides.
-                    </section>
-
-                    <section>
-                        <h3>Mutation Signature Analysis</h3>
-                        <table><tr>
-                            <col style='width:70%' />
-                            <col style='width:30%' />
-                            <td>
-                                <img src='figures/denovo_cosmic_signature_comparison-1.png' />
-                            </td>
-                            <td style='font-size: 26pt'>
-                                <p>570 cancers</p>
-                                <p>NMF successful in 12 cancer types</p>
-                                <p>Clustered into 20 distinct signatures</p>
-                            </td>
-                        </tr></table>
-                    </section>
-
-
-
                 </section>
 
                 <section>
@@ -740,18 +672,6 @@
                         Thank you to our patients, physicians, and collaborators. <br />
 
                         <img src='images/acknowledgements/bcca_photo.jpg' />
-                    </section>
-
-                    <section>
-                        Thank you to my family.
-
-                        <img src='images/acknowledgements/family.jpg' />
-                    </section>
-
-                    <section>
-                        It's been a great five years.
-
-                        <img src='images/acknowledgements/collage.png' />
                     </section>
 
                     <section>
@@ -925,35 +845,232 @@
 
                 </section>
 
+
                 <section>
+                    <section>
+                        <h1>Chapter 2</h1>
+                        <h1>Supplementary</h1>
+                    </section>
+
+                    <section data-markdown> <script type="text/template">
+                        ### Survival and Time on Treatment
+
+                        ![Time on Treatment](figures/ttf_cox_analysis-1.png)
+
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>HRDetect Status</th>
+                                    <th>OS</th>
+                                    <th>TTF</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>High</th>
+                                    <td>384</td>
+                                    <td>143</td>
+                                </tr>
+
+                                <tr>
+                                    <th>Moderate</th>
+                                    <td>160</td>
+                                    <td>71</td>
+                                </tr>
+
+                                <tr>
+                                    <th>Low</th>
+                                    <td>122</td>
+                                    <td>56</td>
+                                </tr>
+                            </tbody>
+                        </table>
+ 
+                        <div class="override">
+                            <div class="conclusion fragment zoom-out" data-fragment-index="1">
+                                Hypothesis: HRD signature &rarr; platinum sensitivity
+                            </div>
+                        </div>
+                    </script> </section>
+
+                    <section data-markdown> <script type="text/template">
+                        <table><tr>
+                            <col style='width: 70%' />
+                            <col style='width: 30%' />
+                            <td>
+                                ![Cohort](figures/combine_clinical_figures-1.png)
+
+                                <p class='figcaption'>
+                                    Zhao ... Jones et al., Clin Cancer Res 2017
+                                </p>
+                            </td>
+                            <td>
+                                <h3>Patient Cohort</h3>
+                                <p><strong>93</strong> Breast Cancers</p>
+                                <p><strong>33</strong> Platinum-treated</p>
+                                <p><strong>26</strong> Treated & Imaged</p>
+                            </td>
+                        </tr></table>
+                    </script> </section>
 
                    <section data-markdown><script type = 'text/template'>
                         ### Is n-of-1 HRDetect feasible?
 
                         ![N-of-1 analysis of HRDetect](figures/hrdetect_nnls_nmf_comparison-1.png)
                     </script></section>
+                </section>
+
+                <section>
+                    <section>
+                        <h1>Chapter 3</h1>
+                        <h1>Supplementary</h1>
+                    </section>
+
+                    <section data-background-image='images/dna_strands.png'>
+                        <div style='color:white; background-color: rgba(0,0,0,0.7); padding: 5px'>
+                            <p>
+                                <strong>Personalizing Mutation Signature Analysis</strong>
+                            </p>
+                            <p>
+                                Clinical application requires individualized signatures. <br />
+                                Mutation signature methods work on large cohorts. <br />
+                            </p>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h3>Analyzing Mutation Signatures of Individual Tumours</h3>
+
+                        <img src='images/mutation_signature_nmf.png' />
+
+                        NMF requires a large cohort to infer mutation signatures and is computationally demanding.
+                    </section>
+
+
+                    <section>
+                        <h3>SignIT improves signature accuracy</h3>
+
+                        Especially in complex models and with noisy data
+
+                        <img src='figures/simulated_data_comparison-1.png' />
+                    </section>
+
+                    <section>
+                        <h4>SignIT provides confidence distributions and signature bleed estimation</h4>
+
+                        Improved clinical interpretability of findings.
+
+                        <div style='width: 80%; margin: 0px auto 0px'>
+                            <img src='figures/example_signit_output-1.png' />
+                        </div>
+                    </section>
+
+                    <section>
+                        <h4>SignIT agrees better with NMF than other methods</h4>
+
+                        SignIT better agrees with NMF.
+
+                        <img src='figures/tcga_spearman_scatter-1.png' />
+                    </section>
+
+                </section>
+
+                <section>
+                    <section>
+                        <h1>Chapter 4</h1>
+                        <h1>Supplementary</h1>
+                    </section>
+
+                    <section data-markdown> <script type='text/template'>
+                        #### Sequencing neglects signature activity.
+
+                        <img src='images/pancreatic-case/general_signature_activity_explanation-01.png' width='70%' />
+
+                        - Sequencing multiple timepoints
+                            <!-- .element: class="fragment" data-fragment-index="1" -->
+                        - Mutation timing within a single sample
+                            <!-- .element: class="fragment" data-fragment-index="2" -->
+                    </script> </section>
+
+
+                    <section data-markdown><script type = 'text/template'>
+                        <img src='./images/pancreatic-case/mutation-timing.png' width = '60%'/>
+
+                        <img src='./images/pancreatic-case/mutation-timing-data.png' width = '70%' />
+ 
+                        <div class="override">
+                            <div class="conclusion fragment zoom-out" data-fragment-index="1">
+                                Hypothesis: Late-onset <br/> BRCA1 loss &rarr; &darr; HRD signature
+                            </div>
+                        </div>
+                    </script></section>
+
 
                     <section data-markdown>
                         ### HRDetect: Primary vs. Metastasis
 
                         ![](images/pancreatic-case/hrdetect.png)
                     </section>
-
                 </section>
 
+                <section>
 
+                    <section>
+                        <h1>Chapter 5</h1>
+                        <h1>Supplementary</h1>
+                    </section>
+
+                    <section>
+                        <h3>Mutation Signature Analysis</h3>
+                        <table><tr>
+                            <col style='width:70%' />
+                            <col style='width:30%' />
+                            <td>
+                                <img src='figures/denovo_cosmic_signature_comparison-1.png' />
+                            </td>
+                            <td style='font-size: 26pt'>
+                                <p>570 cancers</p>
+                                <p>NMF successful in 12 cancer types</p>
+                                <p>Clustered into 20 distinct signatures</p>
+                            </td>
+                        </tr></table>
+                    </section>
+
+                    <section>
+                        <h3>Signature of Platinum Exposure</h3>
+
+                        <img src='images/platinum_signature_exposures.png' />
+                    </section>
+
+                    <section>
+                        <h3>BRCA Reversion &rarr; Platinum Resistance</h3>
+                        
+                        <ul>
+                            <li><strong>BRCA mutation</strong> &rarr; platinum sensitivity</li>
+                            <li><strong>BRCA reversion</strong> &rarr; platinum resistance</li>
+                        </ul>
+
+                        <img src='images/brca_reversion_explanation.png' width='80%' />
+                    </section>
+
+
+
+                </section>
             </div>
         </div>
 
-        <script src="git/headjs/dist/1.0.0/head.min.js"></script>
-        <script src="git/revealjs/js/reveal.js"></script>
+        <script src="packages/headjs/dist/1.0.0/head.min.js"></script>
+        <script src="packages/revealjs/js/reveal.js"></script>
         <script src="assets/js/revealcustom.js"></script>
         <script src="assets/js/switch_image.js"></script>
         <script src="assets/js/revealinitialize.js"></script>
 
         <script>
             Reveal.configure({
-                slideNumber: true
+                slideNumber: true,
+                transition: 'none',
+                transitionSpeed: 'slow',
+                backgroundTransition: 'fade'
             })
         </script>
 

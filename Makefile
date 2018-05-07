@@ -1,3 +1,9 @@
+all: \
+	recurse_submodules
+
+recurse_submodules:
+	git submodule update --init --recursive
+
 figures:
 	rm -rf figures && \
 	if [ -d $@ ]; \
